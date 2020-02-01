@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Filter y SVG</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Filter y SVG</h2>
+        <h3>SVG te permite crear vectores para la web y está soportado por HTML y filter te permite crear filtros para
+            aplicarselos a los diseños svg pudiendole aplicarle diferentes estilos. Filter tambien es una propiedad css
+            que se le puede aplicar a las imagenes</h3>
+
+        <section>
+            <article>
+                <h3>Declaración svg</h3>
+                <p>Para declarar svg en HTML se usa la etiqueta &lt;svg> y ya dentro de ella se define la forma que
+                    quieres que tenga le defines el tamaño que quieres que tenga.</p>
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg width="400" height="110"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;rect width="300" height="100"
+                        style="#f00;stroke-width:3;stroke:rgb(0,0,0)"
+                        /><br>
+                        &lt;/svg>
+                    </div>
+                    <div>
+                        <svg width="400" height="110">
+                            <rect width="300" height="100" style="fill:#f00;stroke-width:3;stroke:rgb(0,0,0)" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Rectangle &lt;rect></h3>
+                <p>En el rectángulo tambien se le pueden poner bordes redondeados usando en los atributos rx
+                    y ry.</p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg width="400" height="180"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;rect x="50" y="20" rx="20" ry="20" width="80" height="80"
+                        style="fill:#fbff00;stroke:black;stroke-width:2" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg width="120" height="120">
+                            <rect x="20" y="20" rx="20" ry="20" width="80" height="80"
+                                style="fill:#fbff00;stroke:black;stroke-width:2" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Circle &lt;circle></h3>
+                <p>Los atributos cs y cy definen las coordenadas del centro del circulo y r el radio.</p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="100" width="100"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;circle cx="50" cy="50" r="40" stroke="black"
+                        stroke-width="3" fill="red" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Ellipse &lt;Ellipse></h3>
+                <p>Es parecido al circulo, solo que el radio de la x y el de la y varían.</p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="140" width="280"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;ellipse cx="110" cy="50" rx="100" ry="50"
+                        style="fill:yellow;stroke:purple;stroke-width:2" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="110" width="280">
+                            <ellipse cx="110" cy="50" rx="100" ry="50"
+                                style="fill:yellow;stroke:purple;stroke-width:2" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Line &lt;line></h3>
+                <p>Dibuja una linea. Las coordenadas x1, y1 definen el principio y las x2, y2 el final de la
+                    línea.</p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="210" width="500"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;line x1="0" y1="0" x2="200" y2="200"
+                        style="stroke:rgb(255,0,0);stroke-width:2" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="110" width="200">
+                            <line x1="0" y1="0" x2="100" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Polygon &lt;polygon></h3>
+                <p>Dibuja una forma que tiene como mínimo 3 lados y tiene que estar cerrada. En points se
+                    definen los puntos.</p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="210" width="500"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;polygon points="80,10 150,190 40,190"
+                        style="fill:lime;stroke:purple;stroke-width:1" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="200" width="200">
+                            <polygon points="80,10 150,190 40,190" style="fill:lime;stroke:purple;stroke-width:1" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Path &lt;path></h3>
+                <p>Se dibuja un camino. Hay varias formas de hacerlo. Para dibujar el camino se usan
+                    comandos, estos son:<br>
+                    M = moveto<br>
+                    L = lineto<br>
+                    H = horizontal lineto<br>
+                    V = vertical lineto<br>
+                    C = curveto<br>
+                    S = smooth curveto<br>
+                    Q = quadratic Bézier curve<br>
+                    T = smooth quadratic Bézier curveto<br>
+                    A = elliptical Arc<br>
+                    Z = closepath
+                </p>
+
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="100" width="400"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;path d="M50 0 L25 200 L225 200 Z" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="100" width="400">
+                            <path d="M50 0 L25 200 L225 200 Z" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>SVG &lt;text></h3>
+                <p>Se usa para definir un texto. También se le puede aplicar el transform. En este ejmplo lo uso:</p>
+                <div id="svg_filter_ejemplo">
+                    <div>
+                        &lt;svg height="60" width="200"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love
+                        SVG&lt;/text><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="60" width="200">
+                            <text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Propiedad stroke</h3>
+                <p>Se le puede poner tipos de formato al borde del svg con las propiedades stroke:</p>
+                <div id="svg_filter_ejemplo">
+                    <p>stroke: puedes cambiarle el color.</p>
+                    <div>
+                        &lt;svg height="80" width="300"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;path stroke="orange" d="M5 20 l215 0" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="80" width="300">
+                            <path stroke="orange" d="M5 20 l215 0" />
+                        </svg>
+                    </div>
+                </div>
+                <div id="svg_filter_ejemplo">
+                    <p>stroke-width: puedes cambiarle el grosor.</p>
+                    <div>
+                        &lt;svg height="80" width="300"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;path stroke-width="10" d="M5 20 l215 0" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="80" width="300">
+                            <path stroke="black" stroke-width="10" d="M5 20 l215 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div id="svg_filter_ejemplo">
+                    <p>stroke-linecap: puedes cambiarle el tipo de filo que tenga.</p>
+                    <div>
+                        &lt;svg height="90" width="300"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;path stroke="black" stroke-width="20" stroke-linecap="round" d="M10
+                        20 l215 0" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="90" width="300">
+                            <path stroke="black" stroke-width="20" stroke-linecap="round" d="M10 20 l215 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div id="svg_filter_ejemplo">
+                    <p>stroke-dasharray: se usa para hacer lineas discontinuas.</p>
+                    <div>
+                        &lt;svg height="90" width="300"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;path stroke="black" stroke-width="5"
+                        stroke-dasharray="20,10,5,5,5,10" d="M10 20 l215 0" /><br>
+                        &lt;/svg>
+                    </div>
+
+                    <div>
+                        <svg height="90" width="300">
+                            <path stroke="black" stroke-width="5" stroke-dasharray="20,10,5,5,5,10" d="M10 20 l215 0" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>FILTER</h3>
+                <p>Los filtros CSS son una poderosa herramienta que los autores pueden utilizar para lograr efectos visuales variables (como filtros Photoshop pero para el navegador). La propiedad filter de CSS proporciona acceso a efectos como desenfoque o cambio de color en el renderizado de un elemento antes de que éste se muestre, incluso algunas propiedades puede bajan el peso de la imagen. Los filtros se utilizan comúnmente para ajustar la representación de una imagen, un fondo o un borde.</p>
+            </article>
+
+            <article>
+                <h3>Blur</h3>
+                <p>Aplica un desenfoque Gaussiano a la imagen. El valor define el número de píxeles que se mezclan entre sí.</p>
+                <div>
+                                <p>filter: blur(5px)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-blur">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Brightness</h3>
+                <p>Se aplica una multiplicación lineal a la imagen, haciendo que parezca más o menos brillante. Un valor de 100% o 1 no producirá ningun cambio, valores inferiores disminuirán el brillo y valores superiores aumentarán el brillo. Acepta como valor un porcentaje o número decimal.</p>
+                <div>
+                                <p>filter: brightness(0.5)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-brightness">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Contrast</h3>
+                <p>Ajusta el contraste del elemento. El valor por defecto sera 100% o 1. Acepta como valor un porcentaje o número decimal.</p>
+                <div>
+                                <p>filter: contrast(200%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-contrast">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Drop-shadow</h3>
+                <p>Aplica un efecto de sombra a la imagen.</p>
+                <div>
+                                <p>filter: drop-shadow(16px 16px 10px black)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-shadow">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Grayscale</h3>
+                <p>Convierte la imagen a escala de grises. El valor por defecto es 0% o 0 y al incrementarse se aumentan los múltiplos lineales de este efecto. Acepta como valor un porcentaje o número decimal.</p>
+                <div>
+                                <p>filter: grayscale(100%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-grayscale">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Hue-rotate</h3>
+                <p>Aplica una rotación de tono (matiz) al elemento. Acepta como valor una medida de ángulo(deg)</p>
+                <div>
+                                <p>filter: hue-rotate(90deg)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-hue">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Invert</h3>
+                <p>Invierte los colores de la imagen. El parámetro define la proporción de la conversión.</p>
+                <div>
+                                <p>filter: invert(100%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-invert">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Opacity</h3>
+                <p>Aplica transparencia a la imagen. El valor del parámetro define la proporción de la conversión. Un valor de 0% es completamente transparente. Acepta como valor un porcentaje o número decimal.</p>
+                <div>
+                                <p>filter: opacity(50%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-opacity">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Saturate</h3>
+                <p>Aplica saturación a la imagen. El valor del parámetro define la proporción de la conversión. </p>
+                <div>
+                                <p>filter: saturate(200%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-saturate">
+                            </div>
+            </article>
+    
+            <article>
+                <h3>Sepia</h3>
+                <p>Convierte la imagen a sepia. El valor por defecto es 0%. Valores entre 0% y 100% son múltiplos lineales del efecto.</p>
+                <div>
+                                <p>filter: sepia(100%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-sepia">
+                            </div>
+            </article>
+    
+            <article>
+                <h3 >Combinación de filtros</h3>
+                <p>Todos los filtros se pueden combinar, separando cada uno por espacio y teniendo en cuenta el orden al declararlos.</p>
+                            <div>
+                                <p>filter: hue-rotate(90deg) saturate(200%)</p>
+                                <img src="img/butterfly.jpg" alt="butterfly">
+                                <img src="img/butterfly.jpg" alt="butterfly" id="filter-multiple">
+                            </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+
+</html>

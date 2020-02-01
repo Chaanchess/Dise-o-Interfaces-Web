@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Práctica 11. Francisco José Sánchez Romero</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <h1>Gestor de tareas</h1>
+            </a>
+            <a href="#" id="menu"><i class="material-icons">menu</i></a>
+        </div>
+        <nav>
+            <ul class="topnav" id="menuSup">
+                <li><a href="#">DIW</a></li>
+                <li><a href="#">DWEC</a></li>
+                <li><a href="#">DWES</a></li>
+                <li><a href="#">HLC</a></li>
+                <li><a href="#">DAW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Añadir nueva tarea</h2>
+        <form action="">
+            <input type="text" placeholder=" Nombre de la tarea" required><br>
+            <select required>
+                <option value="" disabled selected>Selecciona la asignatura</option>
+                <option value="DWEC">DWEC</option>
+                <option value="HLC">HLC</option>
+                <option value="DAW">DAW</option>
+                <option value="DWES">DWES</option>
+                <option value="DIW">DIW</option>
+            </select><br>
+            <label for="date">Fecha de entrega</label><br>
+            <input type="date" placeholder="Fecha de entrega" required><br>
+            <textarea rows="4" cols="20" placeholder="Escribe descripción sobre la tarea." required></textarea>
+            <input type="submit" id="enviar" value="Añadir tarea">
+        </form>
+    </main>
+    <footer>
+        <div id="informacion">
+            <p>Gestor de tareas Ⓒ 2020.</p>
+            <p>Francisco José Sánchez Romero.</p>
+        </div>
+        <div id="redesSociales">
+            <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+            <a href="#"><img src="img/twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="img/linkedin.svg" alt="linkedin"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

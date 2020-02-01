@@ -1,0 +1,466 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+#principal {
+    background-image: url("../imgs/imgForm.jpg");
+    background-size: cover;
+    min-height: 70vh;
+    text-align: center;
+}
+
+#principal>img {
+    height: 32px;
+    width: 32px;
+}
+
+.headerMostrarCasa {
+    background-color: #222831;
+}
+
+header>a {
+    text-decoration: none;
+}
+
+header h1 {
+    color: white;
+    margin-left: 8px;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+header>div i {
+    margin-top: 30px;
+    margin-right: 8px;
+}
+
+header>div a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    padding: 4px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+main {
+    color: black;
+    text-align: center;
+}
+
+.listaCasas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 390px);
+}
+
+
+
+.casa {
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+    height: 370px;
+    transition: 0.5s;
+}
+
+.casa:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0px 20px #222831;
+    transition: 0.5s;
+}
+
+.imagenCasa {
+    height: 200px;
+
+}
+
+.imagenCasa img {
+    height: 195px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.informacionCasa {
+    height: 150px;
+    text-align: justify;
+    position: relative;
+}
+
+.informacionCasa p {
+    margin: 12px;
+}
+
+.nombreCasa {
+    margin: 12px;
+    color: green;
+}
+
+.localizacionCasa {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.capacidadCasa {
+    font-size: 14px;
+}
+
+.precioCasa {
+    font-size: 14px;
+}
+
+.valoracionCasa {
+    font-size: 14px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 15px !important;
+    width: 14px;
+}
+
+#imagenes img {
+    height: 300px;
+    width: 100%;
+}
+
+#botoneraMovil,
+#botoneraEscritorio {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 96px;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+#botoneraEscritorio {
+    display: none;
+}
+
+#botoneraMovil button,
+#botoneraEscritorio button {
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #800000;
+    height: 64px;
+    color: white;
+    width: 90%;
+    transition: 0.5s;
+}
+
+#botoneraMovil button:hover,
+#botoneraEscritorio button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0px 20px #222831;
+    transition: 0.5s;
+}
+
+#informacionPrincipal {
+    text-align: justify;
+    padding: 8px;
+}
+
+#informacionPrincipal h3 {
+    margin-left: 0;
+}
+
+#informacionIconos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 32px);
+    align-items: center;
+    justify-items: center;
+}
+
+
+#informacionIconos p {
+    font-size: 12px;
+}
+
+#informacionResumida,
+#comentarioPropietario,
+#actividades,
+#localizacionCasaMapa {
+    text-align: justify;
+    padding: 8px;
+}
+
+#informacionResumida h3,
+#caracteristicasYServicios h3,
+#comentarioPropietario h3,
+#actividades h3,
+#localizacionCasaMapa h3 {
+    border-bottom: 1px solid gray;
+    color: black;
+}
+
+#caracteristicasYServicios,
+#actividades {
+    text-align: justify;
+}
+
+#caracteristicasYServicios h3 {
+    margin: 8px;
+}
+
+#localizacionCasaMapa iframe {
+    height: 300px;
+    width: 100%;
+}
+
+#comentarios {
+    color: black;
+    padding: 8px;
+}
+
+#comentarios h3 {
+    border-bottom: 1px solid gray;
+}
+
+.informacionComentario {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comentario {
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.nombreYValoracion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.fechaComentario {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.textoComentario {
+    text-align: justify;
+}
+
+#comentarios button {
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #800000;
+}
+
+
+footer {
+    background-color: #222831;
+    padding: 12px;
+}
+
+footer {
+    background-color: #222831;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    height: 28px;
+    width: 28px;
+    transition-duration: 1s;
+}
+
+footer img:hover {
+    transition-duration: 1s;
+    transform: rotate(-360deg) scale(1.2);
+}
+
+#redesSociales {
+    padding: 16px;
+}
+
+nav ul li {
+    display: none;
+}
+
+.topnavresponsive {
+    position: relative;
+    padding: 0;
+}
+
+.topnavresponsive li {
+    margin: 8px;
+    display: block;
+    text-align: center;
+    border: 1px solid white;
+}
+
+form {
+    margin: 8px auto;
+    text-align: center;
+    padding: 8px;
+}
+
+form #fechaEntrada::before {
+    content: "Fecha entrada: \0000a0";
+}
+
+form #fechaSalida::before {
+    content: "Fecha salida: \0000a0";
+}
+
+form input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select {
+    width: 88%;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #800000;
+    color: white;
+}
+
+#formReserva input:valid:not(#enviar){
+    border: 1px solid green;
+}
+#formReserva input:invalid{
+    border: 1px solid red;
+}
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+
+    .listaCasas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 390px);
+    }
+
+    #formularioBusqueda form {
+        background-color: white;
+        margin: 12px auto;
+        border-radius: 8px;
+        width: 400px;
+    }
+
+    
+}
+
+@media screen and (min-width:728px) {
+
+    #localizacionCasaMapa {
+        flex-basis: 50%;
+    }
+
+    #imagenes {
+        height: 50vh;
+        width: 50%;
+    }
+
+    #imagenes img {
+        height: 100%;
+        width: 200%;
+        margin-top: 8px;
+        margin-left: 8px;
+    }
+
+    #imagenes {
+        grid-area: imagenes;
+    }
+
+    #informacionPrincipalIconos {
+        grid-area: informacionPrincipalIconos;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #informacionPrincipal {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #botoneraMovil,
+    #botoneraEscritorio {
+        grid-area: botonera;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #botoneraMovil {
+        display: none;
+
+    }
+
+    #botoneraEscritorio button {
+        height: 8vh;
+        width: 30vh;
+    }
+    #parteSuperior {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "imagenes informacionPrincipalIconos"
+            "imagenes botonera";
+        grid-column-gap: 8px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .topnavresponsive li {
+        display: inline-block;
+        border: none;
+    }
+
+    .listaCasas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 390px);
+    }
+
+    nav ul li {
+        display: inline-block
+    }
+
+    #formularioBusqueda form {
+        background-color: white;
+        margin: 40px auto;
+        border-radius: 8px;
+        width: 450px;
+    }
+}

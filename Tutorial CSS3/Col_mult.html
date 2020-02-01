@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Columnas múltiples</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h2>Columnas múltiples en CSS</h2>
+            <h3>Permite una fácil definición de múltiples columnas de texto</h3>
+        </div>
+
+        <section>
+            <article>
+                <h3 id="column_textCompatibilidad">¿Qué es? , para que sirve y compatibilidad.</h3>
+                <p class="column_estiloDescripcion">Column es una propiedad de CSS3, que nos ofrece la posibilidad de trabajar con las columnas y darles estilos a las mismas, aquí abajo dejo una captura de canIuse y su link correspondiente para ver su compatibilidad.</p>
+                <img src="img/caniuse_col_multiples.png" id="column_imgCanIuse"/>
+                <a href="https://caniuse.com/#search=column" id="column_enlaceCanIuse"> -- > Link CanIuse <--- </a>
+            </article>
+            <article>
+                <h3>Column-Count</h3>
+                <p class="column_estiloDescripcion">Especifíca el numero de columnas en las cuales va a dividir el contenido.</p>
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles valores</h4>
+                    <li>Un numero (x).</li>
+                    <li>Automático (auto).</li>
+                    <li>Valor initial (initial).</li>
+                    <li>Valor inherit (inherit).</li>
+                </ul>
+                </div>
+                <div class="contenedorCss">
+                    <p><b>(Código css)</b></p>
+                    <p>En mi caso lo aplico a una etiqueta de párrafo.</p>
+                    <p class="column_codigoCss">#columnCount{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-count: 3;</b>
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 3px;
+                        <br/> &nbsp;}
+                    </p>
+                </div>
+            </div>
+                <div>
+                    <p class="column_estiloDescripcion">Resultado tras aplicar un colum-count:3.</p>
+                    <p class="columnCount">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                </div>
+    
+            </article>
+            <article>
+                <h3>Column-gap</h3>
+                <p class="column_estiloDescripcion">Especifíca la distancia entre las columnas.</p>
+    
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles medidas</h4>
+                    <li>En pixeles (px).</li>
+                    <li>normal (normal).</li>
+                    <li>Valor initial (initial).</li>
+                    <li>Valor inherit (inherit).</li>
+                </ul>
+                </div>
+                    <div class="contenedorCss">
+                        <p><b>(Código css)</b></p>
+                        <p class="codigoCss">#columnGap{
+                            <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;
+                            <br/> <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 80px;</b>
+                            <br/> &nbsp;}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="column_estiloDescripcion">Separación de columnas aplicando un column-gap:80px.</p>
+                        <p id="columnGap">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                    </div>
+    
+                </div>
+                </div>
+            </article>
+            <article>
+                <h3>Column-rules-style</h3>
+                <p class="column_estiloDescripcion">Delimita con una línea la distancia entre columnas.</p>
+                                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles valores</h4>
+                    <li>Por defeccto (none)<hr style="border: 2px none black; width: 30px;"></li>
+                    <li>Oculto (hidden)<hr style="border: 2px hidden black; width: 30px;"></li>
+                    <li>Estilo dotted (dotted)<hr style="border: 2px dotted black; width: 30px;"></li>
+                    <li>Estilo dashed (dashed)<hr style="border: 2px dashed black; width: 30px;"></li>
+                    <li>Estilo solido (solid)<hr style="border: 2px solid black; width: 30px;"></li>
+                    <li>Estilo doble (double)<hr style="border: 2px double black; width: 30px;"></li>
+                    <li>Estilo initial (initial)<hr style="border: 2px initial black; width: 30px;"></li>
+                    <li>Estilo inherit (inherit)<hr style="border: 2px inherit black; width: 30px;"></li>
+    
+                </ul>
+                </div>
+                <div class="contenedorCss">
+                    <p><b>(Código css, para aplicar un estilo a la línea)</b></p>
+                    <p class="codigoCss">#columnRules{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 80px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-rule-style: solid;</b>
+                        <br/> &nbsp;}
+                </div>
+                  </div>
+                <div>
+                    <p id="columnRulesStyle">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                </div>
+    
+    
+            </article>
+            <article>
+                <h3>Column-rules-width</h3>
+                <p class="column_estiloDescripcion">Aumentando el ancho del delimitador de columnas.</p>
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles medidas</h4>
+                    <li>En pixeles (px).</li>
+                    <li>En porcentaje (%).</li>
+                    <li>Valor relativo de pantalla (vh).</li>
+                </ul>
+                </div>
+    
+                <div class="contenedorCss">
+                    <p><b>(Código css, para aumentar el ancho del delimitador)</b></p>
+                    <p class="codigoCss">#columnRules{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 80px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-rule-style: solid;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-rule-width: 15px;</b>
+                        <br/> &nbsp;}
+                </div>
+                 </div>
+                <div>
+                    <p id="columnRulesWidth">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                </div>
+    
+            </article>
+    
+            <article>
+                 <h3>Column-rules-color</h3>
+                <p class="column_estiloDescripcion">Cambia el color del delimitador de columnas column-color.</p>
+    
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Notaciones de color posibles.</h4>
+                    <li>Valores RGB.</li>
+                    <li>Valores Hexadecimal.</li>
+                    <li>Valores HSL.</li>
+                    <li>Valores RGBA.</li>
+                    <li>Valores HSLA.</li>
+                    <br/>
+                    <p>*Para más información de uso de colores acceder a apartado correspondiente.*</p>
+                </ul>
+                </div>
+    
+    
+                <div class="contenedorCss">
+                    <p><b>(Código css, para aplicar un ancho a la línea)</b></p>
+                    <p class="codigoCss">#columnRuleColor{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 80px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-rule-style: solid;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-rule-width: 15px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-rule-color: red;</b>
+                        <br/> &nbsp;}
+                    </p>
+                </div>
+            </div>
+                <div>
+                    <p id="columnRuleColor">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                </div>
+    
+            </article>
+            <article>
+                 <h3>Column-rules (formato reducido)</h3>
+                <p class="column_estiloDescripcion">Aplicando todas las propiedades colum-rules de forma reducida.</p>
+               
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Formato forma reducida</h4>
+                    <li>column-rule: (tamaño) (tipo de borde) (color)</li>
+                </ul>
+                </div>
+    
+                <div class="contenedorCss">
+                    <p><b>(Código css, aplicando todas las propiedades colum-rules de forma reducida)</b></p>
+                    <p class="codigoCss">#columnRuleColor{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 80px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-rule: 15px solid red;</b>
+                        <br/> &nbsp;}
+                    </p>
+                </div>
+            </div>
+                <div>
+                    <p id="columnRuleReducido">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                </div>
+    
+            </article>
+            <article>
+                <h3>Colum-span</h3>
+                <p class="column_estiloDescripcion">Especifica cuantas columnas va a ocupar el elemento.</p>
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles valores</h4>
+                    <li>Valor por defecto (none).</li>
+                    <li>Ocupa todas las (all).</li>
+                    <li>Valor initial (initial).</li>
+                    <li>Valor inherit (inherit).</li>
+                </ul>
+                </div>
+                <div class="contenedorCss">
+                    <p><b>(Código css, aplicando un span)</b></p>
+                    <p class="codigoCss">#columnRuleColor{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 40px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 1em auto;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: blue;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-span: inherit;</b>
+                        <br/> &nbsp;}
+                    </p>
+                </div>
+            </div>
+                <div class="columSpan">
+                    <h1>Hola soy un H1 con column-span: inherit;</h1> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+                </div>
+    
+            </article>
+            <article>
+                <h3>Colum-width</h3>
+                <p class="column_estiloDescripcion">Especifíca el ancho asignado a las columnas.</p>
+                <div class="contenedorListaCSS">
+    
+                <div class="contenedorLista">
+                <ul class="column_lista">
+                    <h4>Posibles medidas</h4>
+                    <li>Automático (auto).</li>
+                    <li>En pixeles (px).</li>
+                    <li>Valor initial (initial).</li>
+                    <li>Valor inherit (inherit).</li>
+                </ul>
+                </div>
+                <div class="contenedorCss">
+                    <p><b>(Código css, aplicando un ancho a las columnas)</b></p>
+                    <p class="codigoCss">#columWidth{
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-count: 4;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column-gap: 20px;
+                        <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>column-width: 600px;</b>
+                        <br/> &nbsp;}
+                    </p>
+                </div>
+            </div>
+                <div id="columWidth">
+                    Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+                </div>
+            </article>  
+    
+        </section>
+
+    </main>
+    <footer>
+        <div>Álvaro Leiva Toledano</div>
+        <a href="https://twitter.com/alvaroo_leto" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/alvaroolt" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

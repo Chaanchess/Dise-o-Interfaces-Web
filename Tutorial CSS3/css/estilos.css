@@ -1,0 +1,2712 @@
+body {
+  background: #263238;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+footer {
+	text-align: center;
+}
+
+footer div {
+	color: #ECEFF1;
+	margin: 5% 0 1% 0;
+	font-size: 1.5em;
+}
+
+h1 {
+	color: #ECEFF1;
+	text-align: center;
+}
+
+h2 {
+	color: #ECEFF1;
+	text-align: center;
+}
+
+h2>img {
+	height: 2em;
+	width: 2em;
+}
+
+h3 {
+	color: #ECEFF1;
+	text-align: center;
+}
+
+nav {
+	padding: 5px;
+	text-align: center;
+}
+
+nav>ul>li {
+	background: #37474F;
+	border: 2px solid #90A4AE;
+	border-radius: 5px;
+	box-shadow: 4px 4px 5px #B0BEC5 inset;
+	display: inline-block;
+	line-height: 50px;
+	margin: 2px 0px;
+	transition: all 0.2s;
+	width: 9%;
+}
+
+nav>ul>li:hover {
+	background: #CFD8DC;
+	box-shadow: 1px 1px 3px #ECEFF1;
+	transform: scale(1.01, 1.01);
+}
+
+nav>ul>li>a {
+	color: #ECEFF1;
+	font-size: 1em;
+	text-decoration: none;
+	width: 100%;
+}
+
+nav>ul>li:hover>a {
+	color: #263238;
+	font-weight: bold;
+}
+
+main {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+section>article:nth-child(odd) {
+	background-color: #CFD8DC;
+	padding: 10px;
+}
+
+section>article:nth-child(even) {
+	background-color: #ECEFF1;
+	padding: 10px;
+}
+
+section>article>h3 {
+	color: black;
+}
+
+section>article div {
+	padding: 0.6rem;
+	text-align: justify;
+}
+
+section>article>p {
+	font-size: 0.96rem;
+	font-weight: bold;
+	text-align: justify;
+}
+
+span {
+	color: #ECEFF1;
+	font-family: Sosa;
+	font-size: 2em;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.social {
+	color: white;
+	display: inline-block;
+	height: 30px;
+	margin: 5px;
+	transition: all 0.5s;
+	width: 30px;
+}
+
+.social:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width:1550px){
+	nav>ul>li{
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width:800px) {
+	nav>ul>li {
+		width: 90%;
+	}
+}  
+	
+
+/*****************************************/
+/**********		ANIMACIONES		**********/
+/*****************************************/
+
+/*Segunda animación de ejemplo en la regla @keyframes*/
+#anim0_1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    animation-name: animation7;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#anim0_2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    animation-name: animation2_3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#anim0_3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    animation-name: animation5;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/**/
+#anim1 {
+    width: min-content;
+    margin: 0 auto;
+  }
+  
+#semaforo {
+    background-color: rgb(100, 100, 100);
+    width: min-content; 
+    padding: 10px;
+    border: 2px solid black;
+}
+
+#poste {
+    margin: 0 auto;
+    background-color: rgb(100, 100, 100);
+    width: 15%; 
+    padding: 10px;
+    min-height: 350px;
+    border: 1px solid black;
+}
+
+
+/*Luces del semáforo*/
+
+#luzroja {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 100%;
+    animation-name: luz_roja;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes luz_roja {
+    5% {background-color: rgb(255, 0, 0);} 
+    10% {background-color: rgba(150, 0, 0, 0.829);}
+    60% {background-color: rgba(150, 0, 0, 0.829);}
+    65% {background-color: rgb(255, 0, 0);}
+    100% {background-color: rgb(255, 0, 0);}
+}
+
+#luzambar { 
+    width: 80px;
+    height: 80px;
+    background-color: rgba(138, 117, 0, 0.829);
+    border-radius: 100%;
+    animation-name: luz_ambar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes luz_ambar {
+    40% {background-color: rgba(138, 117, 0, 0.829);}
+    45% {background-color: rgb(255, 217, 0);}
+    60% {background-color: rgb(255, 217, 0);}
+    65% {background-color: rgba(138, 117, 0, 0.829);}
+}
+
+#luzverde {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(14, 139, 3, 0.678); 
+    border-radius: 100%;
+    animation-name: luz_verde;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes luz_verde {
+    5% {background-color: rgba(14, 139, 3, 0.678);}
+    10% {background-color: rgb(94, 255, 0);}
+    40% {background-color: rgb(94, 255, 0);}
+    45% {background-color: rgba(14, 139, 3, 0.678);}
+    100% {background-color: rgba(14, 139, 3, 0.678);}
+}
+
+/*Animación 1.2 Ejemplo 2 animation-duration*/
+#animation-duration-1 {
+    width: 100px;
+    height: 50px;
+	background: rgb(235, 183, 183);
+	/*desplazo la caja*/
+    position: relative;
+    animation: animation-duration infinite;
+    animation-duration: 1s;
+}
+#animation-duration-5 {
+    width: 100px;
+    height: 50px;
+    background: rgb(207, 131, 131);
+    position: relative;
+    animation: animation-duration infinite;
+    animation-duration: 5s;
+}
+#animation-duration-10 {
+    width: 100px;
+    height: 50px;
+    background: rgb(209, 86, 86);
+    position: relative;
+    animation: animation-duration infinite;
+    animation-duration: 10s;
+}
+@keyframes animation-duration {
+    from {left: 0px;}
+    to {left: 800px;}
+}
+
+/*Animatio-delay*/
+
+#animation-delay-2{
+	width: 140px;
+    height: 50px;
+    background: rgb(151, 113, 168);
+    position: relative;
+    animation: animation-delay 10s infinite;
+    animation-delay: 2s;
+}
+#animation-delay-3{
+	width: 140px;
+    height: 50px;
+    background: rgb(176, 100, 211);
+    position: relative;
+    animation: animation-delay 10s infinite;
+    animation-delay: 3s;
+}
+#animation-delay-6{
+	width: 140px;
+    height: 50px;
+    background: rgb(137, 96, 156);
+    position: relative;
+    animation: animation-delay 10s infinite;
+    animation-delay: 6s;
+}
+@keyframes animation-delay {
+	0% {left: 0px;}
+	50% {left: 50px; background: indigo}
+    100% {left: 600px;}
+}
+
+/*Animación 3*/
+#anim3_1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation2_3;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+#anim3_2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation2_3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation2_3 {
+    10%  {background-color:orange; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:green; left:400px; top:0px;}
+    75%  {background-color:blue; left:200px; top:0px;}
+    100% {background-color:blueviolet; left:0px; top:0px;}
+}
+
+/*Animación 4*/
+
+/*normal*/
+#anim4_normal {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+/*reverse*/
+#anim4_reverse {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+/*alternate*/
+#anim4_alternate {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*alternate-reverse*/
+#anim4_alternate-reverse {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animation4 {
+    10%  {background-color:orange; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:green; left:100px; top:100px;}
+    75%  {background-color:blue; left:0px; top:100px;}
+    100% {background-color:blueviolet; left:0px; top:0px;}
+}
+
+
+/*Animation5 - Animation-timing-function*/
+
+#animation-timing-function-ease{
+	width: 120px;
+    height: 50px;
+    background: rgb(121, 223, 126);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: ease;
+}
+#animation-timing-function-ease-in{
+	width: 120px;
+    height: 50px;
+    background: rgb(121, 223, 126);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: ease-in;
+}
+#animation-timing-function-ease-out{
+	width: 120px;
+    height: 50px;
+    background: rgb(23, 236, 33);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: ease-out;
+}
+#animation-timing-function-ease-in-out{
+	width: 120px;
+    height: 50px;
+    background: rgb(121, 223, 126);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: ease-in-out;
+}
+#animation-timing-function-linear{
+	width: 120px;
+    height: 50px;
+    background: rgb(171, 212, 173);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: linear;
+}
+#animation-timing-function-step-start{
+	width: 120px;
+    height: 50px;
+    background: rgb(70, 221, 78);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: steps(6, start);
+}
+#animation-timing-function-step-end{
+	width: 120px;
+    height: 50px;
+    background: rgb(17, 197, 26);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: steps(6, end);
+}
+#animation-timing-function-cubic-bezier{
+	width: 120px;
+    height: 50px;
+    background: rgb(39, 109, 42);
+    position: relative;
+    animation: animation-timing-function 10s infinite;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+@keyframes animation-timing-function {
+    from {left: 0px;}
+    to {left: 600px;}
+}
+
+
+/*Animación 6*/
+#anim6_1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation6;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: none;
+}
+
+#anim6_2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation6;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#anim6_3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation6;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+#anim6_4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation6;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes animation6 {
+    from  {background-color:orange; left: 0px;}
+    to {background-color:blueviolet; left: 300px;}
+}
+
+/*Animación 7*/
+#anim7_1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation7;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+#anim7_2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation7;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-play-state: initial;
+    animation-iteration-count: infinite;
+}
+
+#anim7_3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation-name: animation7;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-play-state: inherit;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation7 {
+    from  {background-color:red; left: 0px;}
+    to {background-color:blueviolet; left: 400px;}
+}
+
+/**/
+#anim8 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    background-color: red;
+    text-align: center;
+    animation: animation8 5s linear 1s infinite alternate running;
+}
+
+@keyframes animation8 {
+    10%  {background-color:orange; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:green; left:200px; top:100px;}
+    75%  {background-color:blue; left:0px; top:100px;}
+    100% {background-color:blueviolet; left:0px; top:0px;}
+}
+
+
+/*************************************/
+/**********		BORDES		**********/
+/*************************************/
+
+.bordes{
+    width: 400px;
+    height: 160px;
+	margin: 0 auto;
+	border-style: solid;    
+    border-width: 2px;
+	border-color: black;
+	text-align: center;
+	padding-top: 50px;
+}
+
+#bordesRadius{
+    border-radius: 15px 10px 15px 10px ;
+}
+
+#bordesRadiusTopRight{
+
+	border-top-right-radius: 30px;
+}
+
+#bordesRadiusTopLeft{
+
+	border-top-left-radius: 30px;
+}
+
+#bordesRadiusBottomRight{
+
+	border-bottom-right-radius: 30px;
+}
+#bordesRadiusBottomLeft{
+	border-bottom-left-radius: 30px;
+}
+
+#bordesImage{
+	border-image: url('../img/hormigas.jpg') 70 / 20px / 1 round;
+}
+
+#bordesImageSource{
+    border-image-source: url('../img/hormigas.jpg');
+    border-width: 70px;
+}
+
+#bordesImageWidth{
+	border-image-source: url('../img/hormigas.jpg');
+	border-image-width: 50px 30px 50px 30px;
+}
+
+#bordesImageSlice1{
+	border-image-source: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-repeat: round;
+    border-image-width: 30px;
+}
+
+#bordesImageSlice2{
+
+	border-image-source: url('../img/hormigas.jpg');
+	border-image-repeat: round;
+    border-image-slice: 70 25;
+    border-image-width: 30px;
+}
+
+#bordesImageSlice3{
+
+	border-image-source: url('../img/hormigas.jpg');
+	border-image-repeat: round;
+    border-image-slice: 70 10 60;
+    border-image-width: 30px;
+}
+
+#bordesImageSlice4{
+
+	border-image-source: url('../img/hormigas.jpg');
+	border-image-repeat: round;
+    border-image-slice: 70 15 30 40;
+    border-image-width: 30px;
+}
+
+#bordesRepeat{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: repeat;
+}
+
+#bordesStrech{
+	border-image: url('../img/hormigas.j	pg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat:stretch;
+}
+
+#bordesRound{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: round;
+}
+
+#bordesSpace{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: space;
+}
+
+#bordesImageOutset1{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: round;
+	border-image-outset: 20px;
+	margin-bottom: 60px;
+}
+
+#bordesImageOutset2{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: round;
+	border-image-outset: 20px 40px;
+	margin-bottom: 60px;
+
+}
+
+#bordesImageOutset3{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: round;
+	border-image-outset: 20px 40px 30px;
+	margin-bottom: 60px;
+}
+
+#bordesImageOutset4{
+	border-image: url('../img/hormigas.jpg');
+	border-image-slice: 70;
+	border-image-width: 20px;
+	border-image-repeat: round;
+	border-image-outset: 20px 40px 20px 60px;
+	margin-bottom: 60px;
+
+}
+
+#bordesBoxShadows1{
+    box-shadow: 5px 5px 3px 3px gray;
+}
+
+#bordesBoxShadows2{
+    box-shadow: -5px -5px 3px 3px yellowgreen;
+}
+
+
+/*****************************************/
+/**********		COL MÚLTIPLES 		**********/
+/*****************************************/
+
+#column_imgCompatibilidad img{
+	display: block;
+	margin: 0 auto;
+	width: 950px;
+	height: 550px;
+}
+
+
+.columnCount{
+	column-count: 3;
+	padding: 3px;
+}
+
+
+#columnGap{
+	column-count: 3;
+	column-gap: 80px;
+}
+
+.column_codigoCss{
+	color: #304FFE;
+	font-size: 20px;
+	display: inline-block;
+}
+
+#columnRulesStyle{
+	column-count: 3;
+	column-gap: 80px;
+	column-rule-style: solid; 
+}
+
+#columnRulesWidth{
+	column-count: 3;
+	column-gap: 80px;
+	column-rule-style: solid; 
+	column-rule-width: 15px; 
+}
+
+#columnRuleColor{
+	column-count: 3;
+	column-gap: 80px;
+	column-rule-style: solid; 
+	column-rule-width: 15px; 
+	column-rule-color: red;
+}
+
+#columnRuleReducido{
+	column-count: 3;
+	column-gap: 80px;
+	column-rule: 15px solid red;
+}
+
+.columSpan {
+	column-count: 3;
+}
+
+.columSpan > h1 {
+	column-gap: 40px;
+	margin: 1em auto;
+	color: blue;
+	column-span: inherit;
+}
+
+
+#columWidth{
+	column-count: 4;
+	column-gap: 20px; 
+    column-width: 600px;
+}
+
+.column_estiloDescripcion{
+padding: 5px;
+font-size: 20px;
+}
+
+.contenedorListaCSS{
+		display: inline-block;
+		margin-bottom: 40px;
+}
+.contenedorLista{
+	border: 1px solid black;
+	width: 250px;
+	display: inline-block;
+	text-align: left;
+}
+
+.contenedorLista h4{
+	text-align: center;
+	padding-bottom;
+	margin-right: 25px;
+
+}
+
+.contenedorCss{
+	display: inline-block;
+	margin-left: 240px;
+}
+.column_lista {
+	list-style-type: disc;
+	padding: 5px;
+	margin-left: 20px;
+	margin-bottom: 25px;
+}
+
+#column_imgCanIuse {
+	display: block;
+	margin: 10px auto;
+}
+
+#column_textCompatibilidad {
+	font-size: 27px;
+}
+
+#column_enlaceCanIuse {
+	text-decoration: none;
+	font-size: 27px;
+	color: #FF9800;
+}
+
+
+
+/*****************************************/
+/*****   COLORES Y DEGRADADOS	**********/
+/*****************************************/
+
+
+#pornombre1{
+	padding: 18px;
+	margin: 0px;
+	background-color: indianred;
+	display: inline-block;
+	width: 20%;
+}
+#pornombre2{
+	padding: 18px;
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	background-color: goldenrod;
+}
+#pornombre3{
+	padding: 18px;
+	margin: 0px;
+	background-color: mediumspringgreen;
+	display: inline-block;
+	width: 20%;
+}
+#pornombre4{
+	margin: 0px;
+	padding: 18px;
+	background-color: darkturquoise;
+	display: inline-block;
+	width: 20%;
+}
+
+#hex1{
+	padding: 18px;
+	margin: 0px;
+	background-color: #FF0000;
+	display: inline-block;
+	width: 15%;
+}
+#hex2{
+	padding: 18px;
+	margin: 0px;
+	width: 15%;
+	display: inline-block;
+	background-color: #00FF00;
+}
+#hex3{
+	padding: 18px;
+	margin: 0px;
+	background-color: #0000FF;
+	display: inline-block;
+	width: 15%;
+	color: white;
+}
+#hex4{
+	margin: 0px;
+	padding: 18px;
+	background-color: #000000;
+	display: inline-block;
+	width: 15%;
+	color: white;
+}
+#hex5{
+	margin: 0px;
+	padding: 18px;
+	background-color: #FFFFFF;
+	display: inline-block;
+	width: 15%;
+}
+
+#RGB1{
+	padding: 18px;
+	margin: 0px;
+	background-color: rgb(255, 0, 0);
+	display: inline-block;
+	width: 15%;
+}
+#RGB2{
+	padding: 18px;
+	margin: 0px;
+	width: 15%;
+	display: inline-block;
+	background-color: rgb(0, 255, 0);
+	
+	
+}
+#RGB3{
+	padding: 18px;
+	margin: 0px;
+	background-color: rgb(0, 0, 255);
+	display: inline-block;
+	width: 15%;
+	color: white;
+}
+#RGB4{
+	margin: 0px;
+	padding: 18px;
+	background-color: rgb(0, 0, 0);
+	display: inline-block;
+	width: 15%;
+	color: white;
+}
+#RGB5{
+	margin: 0px;
+	padding: 18px;
+	background-color: rgb(255, 255, 255);
+	display: inline-block;
+	width: 15%;
+}
+#RGBA1{
+	padding: 18px;
+	margin: 0px;
+	background-color: rgba(0, 0, 255, 0.2);
+	display: inline-block;
+	width: 20%;
+}
+#RGBA2{
+	padding: 18px;
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	background-color: rgba(0, 0, 255, 0.4);
+	
+	
+}
+#RGBA3{
+	padding: 18px;
+	margin: 0px;
+	background-color: rgba(0, 0, 255, 0.5);
+	display: inline-block;
+	width: 20%;
+}
+#RGBA4{
+	margin: 0px;
+	padding: 18px;
+	background-color: rgba(0, 0, 255, 0.8);
+	display: inline-block;
+	width: 20%;
+	color: white;
+}
+#imagenHSL{
+	display: inline-block;
+}
+#HSL1{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(0, 100%, 50%);
+}
+
+#HSL2{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(60, 100%, 50%);
+}
+
+#HSL3{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 50%);
+}
+
+#HSL4{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(240, 100%, 50%);
+	color: white;
+}
+
+#HSL5{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 0%, 50%);
+}
+
+#HSL6{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 50%, 50%);
+}
+
+#HSL7{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 75%, 50%);
+}
+
+#HSL8{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 50%);
+}
+
+#HSL9{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 0%);
+	color: white;
+}
+
+#HSL10{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 33%);
+	
+}
+
+#HSL11{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 66%);
+}
+
+#HSL12{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsl(120, 100%, 100%);
+}
+
+#HSLA1{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(0, 100%, 50%, 0.2);
+}
+
+#HSLA2{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(0, 100%, 50%, 0.4);
+}
+
+#HSLA3{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(0, 100%, 50%, 0.6);
+}
+
+#HSLA4{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(0, 50%, 50%, 0.8);
+}
+
+#opacity1{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(60, 100%, 50%);
+	opacity: 0.2;
+}
+
+#opacity2{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(60, 100%, 50%);
+	opacity: 0.4;
+}
+
+#opacity3{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(60, 100%, 50%);
+	opacity: 0.6;
+}
+
+#opacity4{
+	margin: 0px;
+	width: 20%;
+	display: inline-block;
+	padding: 18px;
+	background-color: hsla(60, 100%, 50%);
+	opacity: 0.8;
+}
+
+/*Degradados*/
+
+#grad1 {
+	background-image: linear-gradient(green, yellow);
+	height: 150px;
+	width: 200px;
+	margin: 0 auto;
+  }
+  
+#grad2 {
+  background-image: linear-gradient(to top, green, yellow);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad3 {
+  background-image: linear-gradient(to right, green , yellow);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad4 {
+  background-image: linear-gradient(to left, green , yellow);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad5{
+  background-image: linear-gradient(to bottom right, green, yellow);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad6{
+  background-image: linear-gradient(-90deg, green, yellow);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad7{
+  background-image: linear-gradient(to bottom, red, yellow, green);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad8{
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad9{
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad10{
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad11{
+  background-image: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad12{
+  background-image: radial-gradient(red, yellow, green);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad13{
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+
+}
+
+#grad14{
+  background-image: radial-gradient(circle, red, yellow, green);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+
+}
+
+#grad15{
+  background-image: radial-gradient(red, yellow , green );
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad16{
+  background-image: radial-gradient(closest-side at 80% 25%, red, yellow, black);	
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad17{
+  background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad18{
+  background-image: radial-gradient(closest-corner at 80% 25%, red, yellow, black);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad19{
+  background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#grad20{
+  background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+/*********************************/
+/*****   FILTER y SVG	**********/
+/*********************************/
+
+#filter-blur{
+	filter: blur(5px);
+  }
+  
+  #filter-brightness{
+	filter: brightness(0.5);
+  }
+  
+  #filter-contrast{
+	filter: contrast(200%);
+  }
+  
+  #filter-shadow{
+	filter: drop-shadow(16px 16px 10px black);
+  }
+  
+  #filter-grayscale{
+	filter: grayscale(100%);
+  }
+  
+  #filter-hue{
+	filter: hue-rotate(90deg);
+  }
+  
+  #filter-invert{
+	filter: invert(100%)
+  }
+  
+  #filter-opacity{
+	filter: opacity(50%);
+  }
+  
+  #filter-saturate{
+	filter: saturate(200%);
+  }
+  
+  #filter-sepia{
+	filter: sepia(100%);
+  }
+  
+  #filter-multiple{
+	filter: hue-rotate(90deg) saturate(200%);
+  }
+
+
+/************************************/
+/*******		FONDOS		*********/
+/************************************/
+
+#backgroundColorRgb {
+    background-color: rgb(227, 127, 107);
+    width: 300px;
+    height: 90px;
+}
+
+#backgroundColorRgba {
+    background-color: rgba(238, 104, 26, 0.2);
+    width: 300px;
+    height: 90px;
+}
+
+#backgroundColorHex {
+    background-color: #112f50;
+    width: 300px;
+    height: 90px;
+}
+
+#backgroundColorNombre {
+    background-color: violet;
+    width: 300px;
+    height: 90px;
+}
+
+#backgroundColorHsl {
+    background-color: hsl(10, 90%, 56%);
+    width: 300px;
+    height: 90px;
+}
+
+#backgroundColorHsla {
+    background-color: hsla(10, 90%, 56%, 0.3);
+    width: 300px;
+    height: 90px;
+}
+
+#fondoImagen {
+    width: 700px;
+    height: 300px;
+    border: 1px black solid;
+    background-image: url(../img/fondo.jpg);
+    background-size: 720px 390px;
+}
+
+#fondoDegradado {
+    background-image: linear-gradient(gray, black);
+    width: 720px;
+    height: 200px;
+}
+
+#fondoVariasImgs {
+    width: 700px;
+    height: 300px;
+    border: 1px black solid;
+    background-image: url("../img/fondo_pajaros.png"), url("../img/cielo.jpg");
+    background-size: 720px 390px;
+}
+
+#backgroundRepeat {
+    background-repeat: repeat;
+    width: 300px;
+    height: 200px;
+    border: 1px black solid;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100px 100px;
+}
+
+#backgroundRepeatX {
+    background-repeat: repeat-x;
+    width: 300px;
+    height: 200px;
+    border: 1px black solid;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100px 100px;
+}
+
+#backgroundRepeatY {
+    background-repeat: repeat-y;
+    width: 300px;
+    height: 200px;
+    border: 1px black solid;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100px 100px;
+}
+
+#backgroundNoRepeat {
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    border: 1px black solid;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100px 100px;
+}
+
+
+#backgroundattachmentscrollejemplo {
+    background-image:url("../img/backgroundVictorLogoCSS.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;	
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    width: 300px;
+    height: 300px;
+    background-size: 300px 200px;
+}
+
+#backgroundattachmentfixed {
+    background-image: url("../img/backgroundVictorLogoCSS.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 1px solid black;
+    background-position: 200px;
+    margin: 5px 0px 5px 0px;
+    height: 300px;
+}
+
+
+#backgroundattachmentlocalejemplo {
+    background-image: url("../img/backgroundVictorLogoCSS.png");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    width: 300px;
+    background-position: center;
+    height: 300px;
+}
+
+#backgroundpositionleft{
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-repeat: no-repeat;
+    background-position: right center; 
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    height: 300px;
+}
+
+#backgroundpositionporcentaje {
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%; 
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    height: 300px;
+}
+
+#backgroundpositionpixels {
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-repeat: no-repeat;
+    background-position: 1060px 0px; 
+    border: 1px solid black;
+    margin: 5px 0px 5px 0px;
+    height: 300px;
+    
+}
+
+#backgroundoriginpadding {
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-origin: padding-box;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    border: 15px dotted black;
+    margin: 5px 0px 5px 0px;
+    padding: 20px;
+    height: 300px;
+}
+
+#backgroundoriginborder {
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-origin: border-box;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    border: 15px dashed black;
+    margin: 5px 0px 5px 0px;
+    padding: 20px;
+    height: 300px;
+}
+
+#backgroundorigincontent {
+    background-image: url('../img/backgroundVictorLogoCSS.png');
+    background-origin: content-box;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    border: 15px solid black;
+    margin: 5px 0px 5px 0px;
+    padding: 20px;	
+    height: 300px;
+}
+
+#background-shorthand-ejemplo-aplicado {
+    line-height:normal;
+    min-height: 22rem;
+    background: url('../img/Tierra.gif') right center/contain  repeat-y,url('../img/Tierra.gif') center center/auto auto  repeat-y,url('../img/Paisaje.jpg') left center /contain no-repeat #ccc;
+    padding: 15px;
+    box-shadow: 5px -5px rgba(0, 0, 0, 0.67);
+}
+
+#background-clip {
+    width: 95%;
+    display: inline-block
+}
+
+#background-clip-ejemplo1 {
+    border: 15px dashed black;
+    padding: 35px;
+    background:#70b1ae;
+}
+
+#background-clip-ejemplo2 {
+    border: 10px dashed black;
+    padding: 35px;
+    background:#70b1ae;
+    background-clip: padding-box;
+}
+
+#background-clip-ejemplo3 {
+    border: 10px groove black;
+    padding: 35px;
+    background:#70b1ae;
+    background-clip: content-box;
+}
+
+#background-size-span {
+    background: linear-gradient(cadetblue,rgba(0, 0, 0, 0.92));
+    color: transparent; 
+}
+
+#background-size-ejemplo1-aplicado {
+    background-size: auto auto;
+    background-image: url(../img/La%20Noche%20Estrellada.jpg);
+    background-repeat: no-repeat;
+    height: 150px;
+    padding: 0;
+    border: 10px dashed rgba(0, 0, 255, 0.37);
+}
+
+#background-size-ejemplo2-aplicado {
+    background-size: 120px 80px;
+    background-image: url(../img/La%20Noche%20Estrellada.jpg);
+    background-repeat: no-repeat;
+    height: 150px;
+    padding: 0;
+    border: 10px dashed rgba(0, 0, 255, 0.37);
+}
+
+#background-size-ejemplo3-aplicado {
+    background-size: 50% 50%;
+    background-image: url(../img/La%20Noche%20Estrellada.jpg);
+    background-repeat: no-repeat;
+    height: 150px;
+    padding: 0;
+    border: 10px dashed rgba(0, 0, 255, 0.37);
+}
+
+#background-size-ejemplo4-aplicado {
+    background-size: contain;
+    background-image: url(../img/La%20Noche%20Estrellada.jpg);
+    background-repeat: no-repeat;
+    height: 150px;
+    padding: 0;
+    border: 10px dashed rgba(0, 0, 255, 0.37);
+}
+#background-size-ejemplo5-aplicado {
+    background-size: cover;
+    background-image: url(../img/La%20Noche%20Estrellada.jpg);
+    background-repeat: no-repeat;
+    height: 150px;
+    padding: 0;
+    border: 10px dashed rgba(0, 0, 255, 0.37);
+}
+
+#backgroundblendmodenormal {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat:no-repeat;
+	background-image: linear-gradient(to right, black 0%, white 100%), url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode: normal;
+}
+
+#backgroundblendmodedodge {
+	width: 100%;
+    height: 200px;
+    background-size: 200px 200px;
+    background-repeat:no-repeat;
+    background-image: linear-gradient(to right, black 0%, white 100%), url('../img/backgroundVictorLogoCSS.png');
+    background-blend-mode: color-dodge;
+}
+
+#backgroundblendmodemultiply {
+    width: 100%;
+    height: 200px;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+    background-blend-mode:multiply;
+}
+
+#backgroundblendmodescreen {
+   width: 100%;
+    height: 200px;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+    background-blend-mode:screen;
+}
+
+#backgroundblendmodeoverlay {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:overlay;
+}
+
+#backgroundblendmodedarken {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:darken;
+}
+
+#backgroundblendmodesaturation {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:saturation;
+}
+
+#backgroundblendmodelighten {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:lighten;
+}
+
+#backgroundblendmodecolor {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:color;
+}
+
+#backgroundblendmodeluminosity {
+	width: 100%;
+	height: 200px;
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, black 0%,white 100%),  url('../img/backgroundVictorLogoCSS.png');
+	background-blend-mode:luminosity;
+}
+
+.background-code {
+    width: 90%;
+    border: 3px groove black;
+    margin-left: 5rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    background-color: aliceblue;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.27);
+}
+
+.background-code-origin {
+    width: 70%;
+    border: 3px groove black;
+    margin-left: 5rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    background-color: aliceblue;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.27);
+}
+
+.background-code-blend {
+    width: 75%;
+    border: 3px groove black;
+    margin-left: 5rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    box-shadow: 7px 7px rgba(0, 0, 0, 0.27);
+}
+.pre_fondos {
+    display: block;
+    white-space:pre-wrap;
+    white-space: -moz-pre-wrap; /* Mozilla */
+}
+
+.background-ejemplos {
+    display: inline-block;
+}
+
+.background-lista{
+    padding:inherit;
+    text-align: left;
+    list-style:inside upper-latin;
+    font-size: 0.96rem;
+    font-weight: bold;    
+}
+
+
+
+/***************************************/
+/****	FUENTES Y EFECTOS DE TEXTO 	****/
+/***************************************/
+
+
+@font-face {
+	font-family: "Mystery Quest";
+	src: local('MysteryQuest'),
+		 url("../fonts/MysteryQuest-Regular.ttf");
+  }
+@font-face {
+	src: url('../fonts/LeagueMonoVariable.ttf');
+	font-family:'LeagueMonoVariable';
+    font-style: normal;
+    font-stretch: 1% 500%; /* Required by Chrome */
+  }
+@font-face {
+	src: url('../fonts/Pecita.otf');
+	font-family:'Pecita';
+	font-style: normal;
+  }
+@font-face {
+	src: url('../fonts/FiraSans-Regular.ttf');
+	font-family:'FiraSans';
+  }
+
+.fuentes_pre{
+    text-align: left;
+}
+
+.font-face-modified{
+	font-family: "Mystery Quest", cursive;
+	font-size: 150%;
+}
+
+.text-fill{
+	font: bold 5.8em Bebas, Arial;
+	margin: 0.4em;
+	background: url(../img/bg.jpg) center;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+}
+
+.text-shadow1{
+	font: bold 3em Arial;
+    	text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c5c5c5,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b5b5b5,
+                 0 5px 0 #aaa,
+                 0 6px 0 #a5a5a5,
+                 0 7px 3px rgba(0, 0, 0, 0.3),
+                 0 10px 10px rgba(0, 0, 0, 0.2),
+                 0 10px 20px rgba(0, 0, 0, 0.15),
+                 0 20px 20px rgba(0, 0, 0, 0.1);
+    	color: rgba(255, 255, 255, 0.8);
+}
+
+.text-shadow2{
+	font: 3em Verdana;
+    	text-shadow: 0 0 10px #fff,
+             		 0 0 20px rgba(255, 255, 255, 0.3),
+                     0 0 30px rgba(33, 207, 255, 1),
+                     0 0 40px rgba(33, 207, 255, 0.8),
+                     0 0 60px rgba(33, 207, 255, 0.5),
+                     0 0 100px rgba(33, 207, 255, 0.3);
+    	color: rgba(255, 255, 255, 0.8);
+}
+
+.text-shadow3{
+	font: 3em Verdana;
+    	text-shadow: 0 0 10px #fff,
+             		 0 0 20px rgba(255, 255, 255, 0.3),
+                     0 0 30px rgba(33, 207, 255, 1),
+                     0 0 40px rgba(33, 207, 255, 0.8),
+                     0 0 60px rgba(33, 207, 255, 0.5),
+                     0 0 100px rgba(33, 207, 255, 0.3);
+    	color: transparent;
+}
+
+.ejemplo{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+.kern-normal{
+	font-kerning: normal;
+}
+
+.kern-auto{
+	font-kerning: auto;
+}
+
+.nokern{
+	font-kerning: none;
+}
+
+.text-rendering-auto{
+	
+	text-rendering: auto;
+}
+
+.text-rendering-optimizeSpeed{
+	
+	text-rendering: optimizeSpeed;
+}
+
+.text-rendering-optimizeLegibility{
+	
+	text-rendering: optimizeLegibility;
+}
+
+.text-rendering-geometricPrecision{
+	
+	text-rendering: geometricPrecision;
+}
+
+.ligatures-normal{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: normal;
+}
+
+.ligatures-none{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: none;
+}
+
+.common-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: common-ligatures;
+}
+
+.no-common-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: no-common-ligatures;
+}
+
+.discretionary-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+.no-discretionary-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: no-discretionary-ligatures;
+}
+
+.historical-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: historical-ligatures;
+}
+
+.no-historical-ligatures{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: no-historical-ligatures;
+}
+
+.contextual{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: contextual;
+}
+
+.no-contextual{
+	font: 4em 'FiraSans';
+	font-variant-ligatures: no-contextual;
+} 
+
+.ligatures-normal2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: normal;
+}
+
+.ligatures-none2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: none;
+}
+
+.common-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: common-ligatures;
+}
+
+.no-common-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: no-common-ligatures;
+}
+
+.discretionary-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: discretionary-ligatures;
+}
+
+.no-discretionary-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: no-discretionary-ligatures;
+}
+
+.historical-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: historical-ligatures;
+}
+
+.no-historical-ligatures2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: no-historical-ligatures;
+}
+
+.contextual2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: contextual;
+}
+
+.no-contextual2{
+	font: 4em 'Pecita';
+	font-variant-ligatures: no-contextual;
+} 
+
+.container-stretch{
+	font: 4rem 'LeagueMonoVariable', sans-serif;
+}
+
+.font-stretch-50{
+	font-stretch: 50%;
+}
+
+.font-stretch-100{
+	font-stretch: 100%;
+}
+
+.font-stretch-200{
+	font-stretch: 200%;
+}
+
+.font-stretch-ultra-condensed{
+	font-stretch: ultra-condensed;
+}
+
+.font-stretch-extra-condensed{
+	font-stretch: ultra-condensed;
+} 
+
+.font-stretch-condensed{
+	font-stretch: condensed;
+}
+.font-stretch-semi-condensed{
+	font-stretch: semi-condensed;
+}
+
+.font-stretch-normal{
+	font-stretch: normal;
+} 
+
+.font-stretch-semi-expanded{
+	font-stretch: semi-expanded;
+}
+
+.font-stretch-expanded{
+	font-stretch: expanded;
+}
+
+.font-stretch-extra-expanded{
+	font-stretch: extra-expanded;
+}
+
+.font-stretch-ultra-expanded{
+	font-stretch: ultra-expanded;
+}	
+
+.text-orientation{
+	writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.font-adjust{
+  	font-size-adjust: 0.58;
+}
+
+.caps-none{
+	font-variant: none;
+}
+
+.small-caps{
+	font-variant: small-caps;
+}
+
+.unicase{
+	font-variant: petite-caps;
+}
+
+.variant-numeric-normal{
+	font-variant-numeric: lining-nums;
+}
+
+.variant-numeric-lining-nums{
+	font-variant-numeric: lining-nums;
+}
+
+.font-variant-numeric-oldstyle-nums{
+	font-variant-numeric: oldstyle-nums;
+}
+
+.font-variant-numeric-proportional-nums{
+	font-variant-numeric: proportional-nums;
+}
+
+.font-variant-numeric-tabular-nums{
+	font-variant-numeric: tabular-nums;
+}
+
+.font-variant-numeric-diagonal-fractions{
+	font-variant-numeric: diagonal-fractions;
+}
+
+.font-variant-numeric-stacked-fractions{
+	font-variant-numeric: stacked-fractions; 
+}
+
+.font-variant-numeric-ordinal{
+	font-variant-numeric: ordinal;
+}
+
+.font-variant-numeric-slashed-zeros{
+	font-variant-numeric: slashed-zeros; 
+}
+       
+.container{
+	font: 4em Verdana;
+}
+  
+
+/***********************************************/
+/****	Pseudo-elementos y Pseudo-clases 	****/
+/***********************************************/
+
+
+.pre_pseudos {
+    font-size: 0.96rem;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+/* Inicio Pseudo-elementos */
+
+#pseudo-firstline>p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+    text-align: left;
+}
+
+#pseudo-before>p::before {
+    content: url(../icon/libro.png);
+}
+
+#pseudo-firstletter>p::first-letter {
+    color: #ff0000;
+    font-size: 200%;
+}
+
+#pseudo-after>p::after {
+    content: url(../icon/libro.png);
+}
+
+#pseudo-selection>p::selection {
+    color: #ff0000;
+    background-color: rgb(231, 231, 19);
+}
+
+
+/* Fin Pseudo-elementos */
+
+
+/* Inicio Pseudo-clases */
+
+#pseudo-active>a:active {
+    color: #d5e40d;
+}
+
+#pseudo-checked>form>input:checked {
+    height: 25px;
+    width: 25px;
+}
+
+#pseudo-indeterminate>input:indeterminate {
+    box-shadow: 0 0 1px 1px rgb(241, 7, 7);
+}
+
+#pseudo-enabled-disabled>form>input[type=text]:disabled {
+    background: #9b9a9a;
+}
+
+#pseudo-enabled-disabled>form>input[type=text]:enabled {
+    background: #f1f106;
+}
+
+#pseudo-empty>p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+
+#pseudo-first-child p:first-child {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-first-of-type>p:first-of-type {
+    background-color: rgb(236, 236, 16);
+}
+
+#pseudo-focus>form>input:focus {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-hover>a:hover {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-in-range>input:in-range {
+    border: 2px solid rgb(240, 240, 13);
+}
+
+#pseudo-invalid>input:invalid {
+    border: 2px solid rgb(243, 8, 8);
+}
+
+#pseudo-lang>p:lang(ho) {
+    border: 2px solid rgb(240, 240, 13);
+}
+
+#pseudo-last-child>p:last-child {
+    background: #ff0000;
+}
+
+#pseudo-last-of-type>p:last-of-type {
+    background: #ff0000;
+}
+
+#pseudo-link>a:link {
+    border: 2px solid rgb(250, 250, 5);
+}
+
+#pseudo-not>:not(p) {
+    color: #ff0000;
+}
+
+#pseudo-nth-child>p:nth-child(2) {
+    background: rgb(231, 17, 17);
+}
+
+#pseudo-nth-last-child>p:nth-last-child(2) {
+    background: rgb(231, 17, 17);
+}
+
+#pseudo-nth-last-of-type span {
+    color: rgb(2, 2, 2);
+}
+
+#pseudo-nth-last-of-type>span:nth-last-of-type(2) {
+    background-color: rgb(231, 17, 17);
+}
+
+#pseudo-nth-of-type>:nth-of-type(2) {
+    background: rgb(231, 17, 17);
+}
+
+#pseudo-only-of-type>div>p:only-of-type {
+    background: rgb(231, 17, 17);
+}
+
+#pseudo-only-child>div>p:only-child {
+    background: rgb(231, 17, 17);
+}
+
+#pseudo-optional>input:optional {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-out-of-range>input:out-of-range {
+    border: 2px solid rgb(231, 17, 17);
+}
+
+#pseudo-read-only>input:read-only {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-read-write>input:read-write {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-required>input:required {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-root>:root {
+    background: #ff0000;
+}
+
+#pseudo-target>:target {
+    border: 2px solid rgb(177, 170, 170);
+    background-color: #d6eb9d;
+}
+
+#pseudo-valid>input:valid {
+    background-color: rgb(240, 240, 13);
+}
+
+#pseudo-visited>a:visited {
+    color: rgb(255, 192, 203);
+}
+
+
+/* Fin Pseudo-clases */
+
+/*******************************/
+/****	Transformaciones 	****/
+/*******************************/
+
+.transformaciones-cajaEjemplo{
+    display: inline-block;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+
+.transformaciones-original{
+    position: absolute;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.transformaciones-transformado{
+    position: absolute;
+    background-color: #263238;
+    opacity: 0.95;
+    color: aliceblue;
+    width: 100px;
+    height: 100px;
+}
+
+#transformaciones-ejemploTranslate{
+    transform: translate(50px,50px);
+}
+
+#transformaciones-ejemploTranslateX{
+    transform: translateX(75px);
+}
+
+#transformaciones-ejemploTranslateY{
+    transform: translateY(75px);
+}
+
+#transformaciones-ejemploScale{
+    transform: scale(1.5,1.5);
+}
+
+#transformaciones-ejemploScaleX{
+    transform: scaleX(1.5);
+}
+
+#transformaciones-ejemploScaleY{
+    transform: scaleY(1.5);
+}
+
+#transformaciones-ejemploRotate{
+    transform: rotate(45deg);
+}
+
+#transformaciones-ejemploRotateX{
+    transform: rotateX(70deg);
+}
+
+#transformaciones-ejemploRotateY{
+    transform: rotateY(70deg);
+}
+
+#transformaciones-ejemploSkew{
+    transform: skew(25deg,25deg);
+}
+
+#transformaciones-ejemploSkewX{
+    transform: skewX(45deg);
+}
+
+#transformaciones-ejemploSkewY{
+    transform: skewY(45deg);
+}
+
+#transformaciones-ejemploMatrix{
+    transform: matrix(0.586,0.8,-0.8,0.586,40,40);
+}
+
+#transformaciones-ejemploPerspective{
+	transform: perspective(600px) rotateY(45deg);
+}
+
+#transformaciones-ejemploTranslateZ{
+	transform: perspective(600px) translateZ(200px);
+}
+
+#transformaciones-ejemploScaleZ{
+	transform: perspective(600px) scaleZ(8) rotateY(45deg);
+}
+
+#transformaciones-ejemploScale3d{
+	transform: perspective(600px) scale3d(2,2,2) rotateY(45deg);
+}
+
+#transformaciones-ejemploRotate3d{
+	transform: perspective(600px) rotate3d(1,1,1,45deg);
+}
+
+#transformaciones-ejemploMatrix3d{
+	transform: matrix3d(1,-1,0.50,0,0.71,0.5,0.7,0,-0.5,-0.7,0.6,0,50,-50,10,1);
+}
+
+#transformaciones-ejemploRotateZ{
+	transform: perspective(600px) rotateY(45deg) rotateZ(45deg);
+}
+
+
+
+/***************************/
+/****	TRANSICIONES  	****/
+/***************************/
+
+.transiciones-Property{
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+	height: 250px;
+	border-radius:5px;
+	background: #f45;
+}
+#transiciones-ejemploTransicionesP1:hover{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	transform: scale(0.90);
+	
+}
+#transiciones-ejemploTransicionesP2:hover{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	transform: scale(0.90);
+	transition-duration: 5s;
+	transition-property: all;
+}
+#transiciones-ejemploTransicionesP3:hover{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	transform: scale(0.90);
+	transition-duration: 5s;
+	transition-property: background, border-radius ;
+}
+#transiciones-ejemploTransicionesP4:hover{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	transform: scale(0.90);
+	transition-duration: 5s;
+	transition-property: background;
+}
+.transiciones-Property2{
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	background: #f45;
+	transition-duration:s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD1{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD2{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;	
+	transition-duration: 0.5s;
+	transition-property: all;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD3{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 1s;
+	transition-property: background, border-radius,margin-left ;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD4{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 2s;
+	transition-property: background, border-radius,margin-left ;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD5{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:3s;
+	transition-property: background,margin-left;
+}
+
+.transiciones-Property3{
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	background: #f45;
+	transition-duration:s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD11{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 0.5s,2s,3s;
+	transition-property: background, border-radius,margin-left ;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD21{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;	
+	transition-duration: 3s,2s,1s;
+	transition-property: background, border-radius,margin-left ;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD31{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 5s,1s,0.5s;
+	transition-property: background, border-radius,margin-left ;
+}
+
+.transiciones-Property4{
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	background: #f45;
+	transition-duration:2s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD12{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration:2s;
+}
+.transiciones-Property5{
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	background: #f45;
+	transition-duration:2s;
+	
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesDe1{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration:2s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesDe2{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration:2s;
+	transition-delay:1s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesDe3{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration:2s;
+	transition-delay:1s,2s,3s;
+	transition-property: background, border-radius,margin-left ;
+}
+
+.transiciones-Property6{
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	background: #f45;
+	transition-duration:1s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT1{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 5s;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT2{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;	
+	transition-duration: 5s;
+	transition-timing-function: linear;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT3{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 5s;
+	transition-timing-function: ease-in;
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT4{
+	border-radius:50%;
+	background: rgb(73, 63, 163);
+	margin-left: 70%;
+	transition-duration: 5s;
+	transition-timing-function: steps(6, end);
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT5{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+}
+.transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT5{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+}
+
+
+.transiciones-olM:hover>#transiciones-ejemploTransicionesCB1{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(0.1,0.7, 1.0, 0.1);
+}
+.transiciones-olM:hover>#transiciones-ejemploTransicionesCB2{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(1.0, 1.0, 0.1, 0.1);
+}
+.transiciones-olM:hover>#transiciones-ejemploTransicionesCB3{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(0.1, 0.1, 1, 1);
+}
+.transiciones-olM:hover>#transiciones-ejemploTransicionesCB4{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function:cubic-bezier(0,1.93,0,-0.69);
+}
+.transiciones-olM:hover>#transiciones-ejemploTransicionesCB5{
+	border-radius:50%;
+	background: rgb(73, 63, 163);	
+	margin-left: 70%;
+	transition-duration:5s;
+	transition-timing-function: cubic-bezier(0,1.93,1,-0.84);
+}
+
+#transiciones_caja6{
+    display: inline-flex;
+    
+}
+
+#transiciones_ejemplo6_texto1{
+    text-align: justify;
+    margin-right:60px;
+}
+
+#transiciones_caja7{
+    display: inline-flex;
+    
+}
+
+#transiciones_ejemplo6 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: width 1s ease-in 2s, background-color 4s ease-in 2s;
+}
+
+#transiciones_ejemplo6:hover {
+    width: 1200px;
+    background-color: red;
+}
+
+
+

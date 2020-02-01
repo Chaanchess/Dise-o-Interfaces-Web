@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Transiciones CSS3</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <h2>Transiciones</h2>
+    <h3>Cambio progresivo y suave que vamos a hacer cuando los elementos html pasan de un estado a otro.</h3>
+
+        <section>
+            <article>
+                <h3>Definición de Transición</h3>
+                <p>Las transiciones tratan de animar los cambios en las propiedades CSS, en vez de que los cambios se
+                    efectúen de forma instantánea.</p>
+            </article>
+            <article>
+                <h3>transition-property:</h3>
+                <p>Se usa para definir los nombres de las propiedades CSS en las que el efecto de la transicion debe
+                    aplicarse. Con la sintesis <b>transition-property: estilosALosQueLesVasAAplicarLaTransicion.</b> </p>
+                <div>Ejemplo:
+                    <p>En el siguiente ejemplo vamos a cambiar el estilo de un div al pasar el ratón por encima. Esto lo
+                        hacemos con la propiedad div:hover{nuevoEstilo}.<br> En el ejemplo uno vamos a ver que es lo que
+                        ocurre si no tuviese transiciones. Al hacerle hover al div vamos a aplicarle los siguientes
+                        estilos:
+                        <br>
+                        <blockquote>
+                            #transiciones-ejemploTransicionesP1:hover{<br>
+                            &nbsp&nbsp&nbsp&nbsp border-radius:50%;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                            &nbsp&nbsp&nbsp&nbsp transform: scale(0.90);<br>
+                            }
+                        </blockquote>
+                        Son 3 propiedades las que vamos a cambiarles. Si queremos aplicarle una transicion a unas si y
+                        otras no, podemos elegir a cuales aplicarles con transition-property:. Todas tienen un
+                        transition-duration de 5 segundos.
+                        <ol>
+                            <li>Sin transiciones</li>
+                            <div class="transiciones-Property" id='transiciones-ejemploTransicionesP1'>1<br><br>
+                                border-radius:50%;<br>
+                                background: rgb(73, 63, 163);<br>
+                                transform: scale(0.90);<br>
+                            </div>
+                            <li>transition-property: all; (Con esto le añadimos transiciones al todas las propiedades)</li>
+                            <div class="transiciones-Property" id='transiciones-ejemploTransicionesP2'>3<br><br>
+                                border-radius:50%;<br>
+                                background: rgb(73, 63, 163);<br>
+                                transform: scale(0.90);<br>
+                                transition-duration: 5s;<br>
+                                <b>transition-property: all</b><br></div>
+                            <li>transition-property: background, border-radius;(Con esto le aplicamos la transicion a las
+                                propiedades: background, border-radius. Es decir, transform no tienen transición.)</li>
+                            <div class="transiciones-Property" id='transiciones-ejemploTransicionesP3'>4<br><br>
+                                border-radius:50%;<br>
+                                background: rgb(73, 63, 163);<br>
+                                transform: scale(0.90);<br>
+                                transition-duration: 5s;<br>
+                                <b>transition-property: background, border-radius</b><br></div>
+                            <li>transition-property: background;(Con esto le aplicamos la transicion a la propiedad:
+                                background. Las otras no tienen transicion.)</li>
+                            <div class="transiciones-Property" id='transiciones-ejemploTransicionesP4'>5<br><br>
+                                border-radius:50%;<br>
+                                background: rgb(73, 63, 163);<br>
+                                transform: scale(0.90);<br>
+                                transition-duration: 5s;<br>
+                                <b>transition-property: background</b><br></div>
+                        </ol>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3>transition-duration:</h3>
+                <p>Con esta propiedad definimos el tiempo que va a durar la transición en hacerse:</p>
+                <div class="transiciones-DivD">Ejemplo:
+                    <p>Al hacerle hover al div vamos a aplicarle los siguientes estilos:
+                        <br>
+                        <blockquote>
+                            .transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD1{<br>
+                            &nbsp&nbsp&nbsp&nbsp border-radius:50%;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                            &nbsp&nbsp&nbsp&nbsp margin-left: 70%;<br>
+                            }
+                        </blockquote>
+                        <b>Con transition-duration:tiempoEnSegundos; (Para el ejemplo utilizaremos segundos, pero también se puede poner en milisegundos.)</b> definimos el tiempo que va a durar la animación.
+                        En los
+                        siguientes ejemplos vamos a ver una comparativa del tiempo
+                        <ol>
+                            <li>transition-duration: 0s</li>
+                            <div class="transiciones-Property2" id='transiciones-ejemploTransicionesD1'>1</div>
+                            <li>transition-duration: 0.5s</li>
+                            <div class="transiciones-Property2" id='transiciones-ejemploTransicionesD2'>2</div>
+                            <li>transition-duration: 1s</li>
+                            <div class="transiciones-Property2" id='transiciones-ejemploTransicionesD3'>3</div>
+                            <li>transition-duration: 2s</li>
+                            <div class="transiciones-Property2" id='transiciones-ejemploTransicionesD4'>4</div>
+                            <li>transition-duration: 3s</li>
+                            <div class="transiciones-Property2" id='transiciones-ejemploTransicionesD5'>5</div>
+                        </ol>
+                    </p>
+                </div>
+            </article>
+    
+    
+    
+            <article>
+                <h3>transition-duration: (II)</h3>
+                <p>Con esta propiedad definimos el tiempo que va a durar la transición en hacerse. Si se combina con
+                    transition-property, se pueden poner los tiempos de duración de cada una de las propiedades.</p>
+                <div class="transiciones-DivD">Ejemplo:
+                    <p>Al hacerle hover al div vamos a aplicarle los siguientes estilos:
+                        <br>
+                        <blockquote>
+                            .transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD11{<br>
+                            &nbsp&nbsp&nbsp&nbsp border-radius:50%;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                            &nbsp&nbsp&nbsp&nbsp margin-left: 70%;<br>
+                            }
+                        </blockquote>
+                        Con <b>transition-duration:tiempoDeLaPrimeraPropiedad, tiempoDeLaSegundaPropiedad...;</b> definimos
+                        el
+                        tiempo que va a durar la animación en cada una de las propiedades. En los
+                        siguientes ejemplos vamos a ver una comparativa del tiempo
+                        <ol>
+                            <li>transition-duration: 0.5s,2s,3s; con transition-property: background,
+                                border-radius,margin-left;</li>
+                            <div class="transiciones-Property3" id='transiciones-ejemploTransicionesD11'>1</div>
+                            <li>transition-duration: 3s,2s,1s; con transition-property: background,
+                                border-radius,margin-left;</li>
+                            <div class="transiciones-Property3" id='transiciones-ejemploTransicionesD21'>2</div>
+                            <li>transition-duration: 5s,1s,0.5s; con transition-property: background,
+                                border-radius,margin-left;</li>
+                            <div class="transiciones-Property3" id='transiciones-ejemploTransicionesD31'>3</div>
+                        </ol>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3>transition-duration: (III)</h3>
+                <p>Como hemos visto en los anteriores ejemplos, la transicion ocurre en un tiempo, pero cuando dejamos de
+                    hacer hover, esta vuelve instantaneamente. Esto se soluciona poniendo transition-duration: Xs en el
+                    estilo de la caja sin hover.
+                </p>
+                <div class="transiciones-DivD">Ejemplo:
+                    <p>Al cargar la página, el siguiente div tiene los siguientes estilos:
+                        <br>
+                        <blockquote>
+                            .transiciones-Property4{<br>
+                            &nbsp&nbsp&nbsp&nbsp text-align: center;<br>
+                            &nbsp&nbsp&nbsp&nbsp width: 50px;<br>
+                            &nbsp&nbsp&nbsp&nbsp height: 50px;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: #f45;<br>
+                            &nbsp&nbsp&nbsp&nbsp <b>transition-duration:2s;</b><br>
+                            }
+                        </blockquote>
+                        Y Al hacerle hover al div vamos a aplicarle los siguientes estilos:
+                        <br>
+                        <blockquote>
+                            .transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesD12{<br>
+                            &nbsp&nbsp&nbsp&nbsp border-radius:50%;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                            &nbsp&nbsp&nbsp&nbsp margin-left: 70%;<br>
+                            &nbsp&nbsp&nbsp&nbsp transition-duration:2s;<br>
+                            }
+                        </blockquote>
+                        <ol>
+                            <li>transition-duration:2s; cuando se hace hover, y al cargar la página.</li>
+                            <div class="transiciones-Property4" id='transiciones-ejemploTransicionesD12'>1</div>
+                        </ol>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3>transition-delay: </h3>
+                <p>Tiene un comportamiento parecido al transition-duration. Con transition-delay retrasamos la aparicion de
+                    la transicion.
+                </p>
+                <div class="transiciones-DivD">Ejemplo:
+                    Al hacerle hover al div vamos a aplicarle los siguientes estilos:
+                    <br>
+                    <blockquote>
+                        .transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesDe1{<br>
+                        &nbsp&nbsp&nbsp&nbspborder-radius:50%;<br>
+                        &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                        &nbsp&nbsp&nbsp&nbsp margin-left: 70%;<br>
+                        &nbsp&nbsp&nbsp&nbsp transition-duration:2s;<br>
+                        }
+                    </blockquote>
+                    <ol>
+                        <li>Sin delay.</li>
+                        <div class="transiciones-Property5" id='transiciones-ejemploTransicionesDe1'>1</div>
+                        <li><b>transition-delay: 1s</b></li>
+                        <div class="transiciones-Property5" id='transiciones-ejemploTransicionesDe2'>2</div>
+                        <li><b>transition-delay:1s,2s,3s;</b> con transition-property: background,
+                            border-radius,margin-left; Es
+                            decir, funcionamiento como en transition-duration. La propiedad background tiene un segundo de
+                            delay,border-radius tiene dos y margin-left tiene 3s. </li>
+                        <div class="transiciones-Property5" id='transiciones-ejemploTransicionesDe3'>3</div>
+                    </ol>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3>transition-timing-function</h3>
+                <p>Especifica la curva cúbica bézier que se usa para definir cómo se computan los valores intermedios para
+                    las propiedades. </p>
+                <div class="transiciones-DivD">Ejemplo:
+                    <p>Al hacerle hover al div vamos a aplicarle los siguientes estilos:
+                        <br>
+                        <blockquote>
+                            .transiciones-DivD:hover>ol>#transiciones-ejemploTransicionesT1{<br>
+                            &nbsp&nbsp&nbsp&nbsp border-radius:50%;<br>
+                            &nbsp&nbsp&nbsp&nbsp background: rgb(73, 63, 163);<br>
+                            &nbsp&nbsp&nbsp&nbsp margin-left: 70%;<br>
+                            &nbsp&nbsp&nbsp&nbsp transition-duration: 5s;<br>
+                            }
+                        </blockquote>
+                        Con <b>transition-timing-function</b> le podemos indicar como va a comprortarse la transición
+                        durante su duración. Si quieremos que valla con un comportamiento lineal, si queremos que valla
+                        más rápido al principio. Si queremos que valla por pasos etc.. En los siguientes ejemplos lo
+                        detallamos:(todas tienen un transition-duration:5s)
+                        <ol>
+                            <li>Sin transition-timing-function</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesT1'>1</div>
+                            <li>transition-timing-function: linear;</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesT2'>2</div>
+                            <li>transition-timing-function: ease-in;</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesT3'>3</div>
+                            <li>transition-timing-function: steps(6, end);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesT4'>4</div>
+                            <li>transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesT5'>5</div>
+                        </ol>
+                        Con esta última, podemos conseguir todas las anteriores, solo hay que conocer los puntos y puedes
+                        conseguir casi cualquier comportamiento. Se comporta de la siguiente manera
+                        cubic-bezier(x1,y1,x2,y2); y con ello traza una curva de bezier. He utilizando la siguiente páguina
+                        para simular los
+                        siguientes comportamientos: <a href="http://cubic-bezier.com/">Curba bezier</a>
+                        <ol class="transiciones-olM">
+                            <li>transition-timing-function: cubic-bezier(0.1,0.7, 1.0, 0.1);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesCB1'>1</div>
+                            <li>transition-timing-function: cubic-bezier(1.0, 1.0, 0.1, 0.1);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesCB2'>2</div>
+                            <li>transition-timing-function: cubic-bezier(0.1, 0.1, 1, 1);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesCB3'>3</div>
+                            <li>transition-timing-function:cubic-bezier(0,1.93,0,-0.69);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesCB4'>4</div>
+                            <li>transition-timing-function: cubic-bezier(0,1.93,1,-0.84);</li>
+                            <div class="transiciones-Property6" id='transiciones-ejemploTransicionesCB5'>5</div>
+                        </ol>
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h3>transition</h3>
+                <p>Podemos pasar todas las propiedades de la transición en una sola propiedad mediante:</p>
+                <p>transition: [transition-property] [transition-duration] [transition-timing-function]
+                    [transition-delay];</p>
+                <div id="transiciones_caja6">
+                    <br>
+                    <div id="transiciones_ejemplo6_texto1">Ej: <br><br>transition-property: opacity, width;
+                        <br>transition-duration: 1s, 3000ms;</div><br>
+                    <br>
+                    <div id="transiciones_ejemplo6_texto1">Sería lo mismo que: <br><br>transition: opacity 1s, width
+                        3000ms;</div>
+                </div>
+
+
+                <h3>Combinación de propiedades</h3>
+                <p>Podemos combinar la propiedad transition-duration con transition-property y transition-delay para
+                    asignarles valores diferentes independientes, es decir si queremos que el cambio de color suceda en
+                    6 segundos y que el cambio de ancho suceda
+                    en 1 usaríamos:</p>
+                <div id="transiciones_caja7">
+                    <br>
+                    <div id="transiciones_ejemplo6_texto1">Ej: <br><br>transition: width 1s ease-in 2s, background-color 4s ease-in 2s;
+                    </div><br>
+                    <br>
+                    <div id="transiciones_ejemplo6_texto1">Sería lo mismo que: <br><br>transition-property: width, background-color;
+                    <br>transition-duration: 1s, 6s;<br>timing-function: ease-in,ease-in;<br>transition-delay:2s,2s;</div>
+                </div>
+                <div id="transiciones_ejemplo6"></div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

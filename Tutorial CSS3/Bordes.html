@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TUTORIAL CSS3 - Bordes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+    <h2>TUTORIAL CSS3 - Bordes</h2>
+    <h3>Propiedades para modificar los bordes de los elementos de un documento HTML</h3>
+
+    <section>
+        <article>
+            <h3>border-radius</h3>
+            <p>Indica que el tamaño del borde redondeado. Es importante definir un border-style para que el borde
+                se vea
+                redondeado.</p>
+            <p>Admite de uno a cuatro valores, que son los siguientes: </p>
+            <p>Un valor: se aplica a los cuatros lados.</p>
+            <p>Dos valores. se aplica el primero a arriba y abajo y el segundo a derecha e
+                izquierda.</p>
+            <p>Tres valores: se aplica el primero a arriba,el segundo a derecha e izquierda y el
+                tercero a abajo.</p>
+            <p>Cuatro valores: se aplica el primero a arriba, el segundo a la derecha, el tercero abajo y el cuarto
+                a la izquierda.</p>
+            <p>Su sintaxis es : border-radius: 15px 10px 15px 10px ;</p>
+            <div id="bordesRadius" class="bordes">
+                border-radius: 15px 10px 15px 10px;</br>
+                border-style: solid;</br>
+                border-width: 2px;</br>
+                border-color: black;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-top-right-radius</h3>
+            <p>Indica que el borde superior sea redondeado. Es importante definir un border-style para que el borde
+                se vea redondeado.</p>
+            <p>Su sintaxis es <i>border-top-right-radius: 30px.</i></p>
+            <div id="bordesRadiusTopRight" class="bordes">
+                border-top-right-radius: 30px</br>
+                border-style: solid;</br>
+                border-width: 2px;</br>
+                border-color: black;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-top-left-radius</h3>
+            <p>Indica que el borde superior izquierdo sea redondeado. Es importante definir un border-style para
+                que el borde se vea redondeado.</p>
+            <p>Su sintaxis es <i>border-top-left-radius: 30px;</i></p>
+            <div id="bordesRadiusTopLeft" class="bordes">
+                border-top-right-radius: 30px;</br>
+                border-style: solid;</br>
+                border-width: 2px;</br>
+                border-color: black;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-bottom-right-radius</h3>
+            <p>Indica que el borde inferior derecho sea redondeado. Es importante definir un border-style para que
+                el borde se vea redondeado.</p>
+            <p>Su sintaxis es <i>border-bottom-right-radius: 30px;</i>
+            </p>
+            <div id="bordesRadiusBottomRight" class="bordes">
+                border-bottom-right-radius: 30px;</br>
+                border-style: solid;</br>
+                border-width: 2px;</br>
+                border-color: black;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-bottom-left-radius</h3>
+            <p>Indica que el borde inferior izquierdo sea redondeado.Es importante definir un border-style para que
+                el borde se vea redondeado.</p>
+            <p>Su sintaxis es <i>border-bottom-left-radius: 30px;</i></p>
+            <div id="bordesRadiusBottomLeft" class="bordes">
+                border-bottom-left-radius: 30px;</br>
+                border-style: solid;</br>
+                border-width: 2px;</br>
+                border-color: black;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-image-source</h3>
+            <p>Establece una imagen como borde. El elemento debe tener definido un borde y un ancho para poder
+                mostrarse. Si no encuentra la imagen, mostrará el borde indicado.</p>
+            <p>Si solo se utiliza esta propiedad, la imagen se mostrará repetida en las cuatro esquinas.</p>
+            <p>Su sintaxis es border-image-source: url('imagen.jpg);</p>
+            <div id="bordesImageSource" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-width: 70px;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-image-width</h3>
+            <p>Establece el ancho de la imagen utilizada como borde.</p>
+            <p>Admite de uno a cuatro valores, que son los siguientes: </p>
+            <p>Un valor: se aplica a los cuatros lados.</p>
+            <p>Dos valores. se aplica el primero a arriba y abajo y el segundo a derecha e
+                izquierda.</p>
+            <p>Tres valores: se aplica el primero a arriba,el segundo a derecha e izquierda y el
+                tercero a abajo.</p>
+            <p>Cuatro valores: se aplica el primero a arriba, el segundo a la derecha, el tercero abajo y el cuarto
+                a la izquierda.</p>
+            <p>auto: toma el valor definido en border-image-slice</p>
+            <p>Su sintaxis es : border-image-width: 50px 30px 50px 30px;</p>
+            <div id="bordesImageWidth" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-image-width: 50px 30px 50px 30px;</br>
+            </div>
+        </article>
+
+        <article>
+            <h3>border-image-slice</h3>
+            <p>Permite trocear la imagen que vamos a utilizar como borde. La imagen se divide en nueve partes y se
+                troceará en función de los valores dados.</p>
+            <p>Admite de uno a cuatro valores, que pueden ser porcentajes o numéricos, en este caso. se
+                interpretarán como píxeles en imágenes de mapa de bits o como coordenadas en imágenes vectoriales.</p>
+            <img src="img/border-slice.png" alt="">
+            <p>Estos valores indican el trozo de imagen que se recortará.</p>
+            <p>Admite de uno a cuatro valores, que son los siguientes: </p>
+            <p>Un valor: se aplica a los cuatros lados.</p>
+            <p>Dos valores. se aplica el primero a arriba y abajo y el segundo a derecha e
+                izquierda.</p>
+            <p>Tres valores: se aplica el primero a arriba,el segundo a derecha e izquierda y el
+                tercero a abajo.</p>
+            <p>Cuatro valores: se aplica el primero a arriba, el segundo a la derecha, el tercero abajo y el cuarto
+                a la izquierda.</p>
+            <p>Su sintaxis es : border-image-slice: 70 15 30 40;</p>
+            <div id="bordesImageSlice1" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-image-repeat: round;</br>
+                border-image-slice: 70;</br>
+                border-image-width: 30px;</br>
+            </div></br>
+            <div id="bordesImageSlice2" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-image-repeat: round;</br>
+                border-image-slice: 70 25;</br>
+                border-image-width: 30px;</br>
+            </div></br>
+            <div id="bordesImageSlice3" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-image-repeat: round;</br>
+                border-image-slice: 70 10 60;</br>
+                border-image-width: 30px;</br>
+            </div></br>
+            <div id="bordesImageSlice4" class="bordes">
+                border-image-source: url('../img/hormigas.jpg');</br>
+                border-image-repeat: round;</br>
+                border-image-slice: 70 15 30 40;</br>
+                border-image-width: 30px;</br>
+            </div></br>
+        </article>
+
+        <article>
+            <h3>border-image-repeat</h3>
+            <p>Establece la forma en la que la imagen se repite a lo largo del borde.</p>
+            <p>Puede tener cuatro valores:</p>
+            <p>stretch: la imagen se estire o encoge para ocupar el espacio necesario del borde.</p>
+            <p>repeat: la imagen se repite para ocupar todo el espacio del borde.</p>
+            <p>round: la imagen se repite hasta cubrir el espacio del borde, si no se ajusta tras repetirse un
+                número íntegro de veces, la imagen se escala para ajustarse.</p>
+            <p>space: la imagen es distribuida en mosaico.</p>
+            <p>Su sintaxis es : border-image-repeat: repeat/strech/space/round;</p>
+            <div id="bordesRepeat" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: repeat;</br>
+            </div></br>
+            <div id="bordesStrech" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: strech;</br>
+            </div></br>
+            <div id="bordesRound" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: round;</br>
+            </div></br>
+            <div id="bordesSpace" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: space;</br>
+            </div></br>
+
+            </div>
+        </article>
+
+        <article>
+            <h3>border-image</h3>
+            <p>Indica que el borde será una imagen.</p>
+            <p>Esta propiedad se utiliza para agrupar las propiedades border-image-source, border-image-slice,
+                border-image-width, border-image-outset y border-image-repeat
+                en una sola propiedad. Se debe separa mediante barras las propiedades border-slice, border-width y
+                border-image-outset.</p>
+            <p>
+                Su sintaxis es: border-image: url('../img/hormigas.jpg') 70 / 20px / 1 round;
+            </p>
+            <div id="bordesImage" class="bordes">
+                border-image: url('../img/hormigas.jpg') 70 / 20px / 1 round;
+            </div>
+        </article>
+
+        <article>
+            <h3>border-image-outset</h3>
+            <p>Permite extender la imagen de borde más allá del elemento que lo contiene.</p>
+            <p>Se puede indicar mediante una unidad de longitud como px o cm o mediante un número que se
+                multiplicará por el ancho del borde. Por ejemplo, con un ancho de borde de 5px, 2 representaría 2 *
+                5px.</p>
+            <p>Admite de uno a cuatro valores, que son los siguientes: </p>
+            <p>Un valor: se aplica a los cuatros lados.</p>
+            <p>Dos valores. se aplica el primero a arriba y abajo y el segundo a derecha e
+                izquierda.</p>
+            <p>Tres valores: se aplica el primero a arriba,el segundo a derecha e izquierda y el
+                tercero a abajo.</p>
+            <p>Cuatro valores: se aplica el primero a arriba, el segundo a la derecha, el tercero abajo y el cuarto
+                a la izquierda.</p>
+                <p>Su sintaxis es : border-image-outset: 20px 40px 2
+                        0px 60px;</p>
+            <div id="bordesImageOutset1" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: round;</br>
+                border-image-outset: 20px;</br>
+                margin-bottom: 60px;</br>
+
+            </div>
+            <div id="bordesImageOutset2" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: round;</br>
+                border-image-outset: 20px 40px;</br>
+                margin-bottom: 60px;</br>
+
+            </div>
+            <div id="bordesImageOutset3" class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: round;</br>
+                border-image-outset: 20px 40px 3>0px;</br margin-bottom: 60px;</br> </div> <div id="bordesImageOutset4"
+                    class="bordes">
+                border-image: url('../img/hormigas.jpg');</br>
+                border-image-slice: 70;</br>
+                border-image-width: 20px;</br>
+                border-image-repeat: round;</br>
+                border-image-outset: 20px 40px 2</br>0px 60px;
+                margin-bottom: 60px;</br>
+
+            </div>
+        </article>
+
+        <article>
+            <h3>box-shadow</h3>
+            <p>Proyecta una sombra difuminada en la estructura de casi cualquier elemento. Si se hace sobre un
+                border-radius, esta sombra se aplica a las esquinas redondeadas</p>
+            <p>Admite de 2 a 5 valores, siendo obligatorio el lugar donde se coloca la sombra</p>
+            <p>Sus valores son:</p>
+            <p>offset-x: Distancia desde eje x indicada en píxeles. Si se indica un número ne gativo, se coloca
+                hacia arriba</p>
+            <p>offset-y: Distancia desde eje y indicada en píxeles. Si se indica un número negativo, se coloca
+                hacia la izquierda</p>
+            <p>blur-radius: Difuminado de la sombra.</p>
+            <p>spread-radius: Expasión de la sombra.</p>
+            <p>color: Color de la sombra.</p>
+            <p>Su sintaxis es : box-shadow: -5px -5px 3px 3px gray;</p></br>
+            <div id="bordesBoxShadows1" class="bordes">
+                box-shadow: 5px 5px 3px 3px gray;
+            </div></br>
+            <div id="bordesBoxShadows2" class="bordes">
+                box-shadow: -5px -5px 3px 3px gray;
+            </div>
+        </article>
+
+    </section>
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    background-image: url("../imgs/principal.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor{
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.contenedor span{
+    color:white;
+    display: block;
+}
+
+#texto1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    animation: aparecer 2s;
+    animation-delay: 1s;
+    color: #202124;
+    font-family: 'shadow-multiple', serif;
+}
+
+#texto2{
+    font-size: 35px;
+    color: #202124;
+    animation: aparecer 3s;
+    animation-delay: 3s;
+    margin-top: 120px;
+    opacity: 0;
+}
+
+span{
+    opacity: 0;
+}
+#boton {
+    opacity: 0;
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #800000;
+    padding: 23px;
+    animation: aparecer 2s;
+    font-size: 23px;
+    animation-delay: 2s;
+    margin-top: 190px;
+    color: white;
+}
+
+@keyframes aparecer{
+    from {
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+@media screen and (min-width:728px){
+    #texto1{
+        font-size: 50px;
+    }
+
+    #texto2{
+        font-size: 45px;
+    }
+
+    #boton {
+        font-size: 26px;  
+        padding: 28px;
+    }
+}
+@media screen and (min-width:1024px) {
+    
+    #texto1{
+        font-size: 70px;
+    }
+
+    #texto2{
+        font-size: 60px;
+    }
+
+    #boton {
+        font-size: 29px;  
+        padding: 25px;
+    }
+}

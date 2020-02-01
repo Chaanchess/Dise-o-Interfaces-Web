@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Transformaciones</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <h2>TRANSFORMACIONES CSS3</h2>
+        <h3>Las transformaciones son elementos capaces de realizar todo tipo
+            de efectos visuales, 2d y 3d, con las transformaciones de 
+            CSS3 se pueden mover, girar,redimensionar e
+            inclinar los elementos HTML.</h3>
+
+            <section>
+
+                    <article>
+                        <h3>perspective(x)</h3>
+                        <p>Le da perspectiva al elemento, activando un espacio en 3D. El valor X indica la distancia a la que
+                            se encuentra el usuario. Si el elemento no tiene perspectiva, las
+                            transformaciones sobre el eje Z no tendrán ningun efecto</p>
+                        <p>Su estructura es perspective(x) donde x se refiere a la distancia entre el usuario y el elemento. A
+                            mayor distancia, menor será el efecto 3D.</p>
+                        <div>transform: perspective(600px) rotateY(45deg)</div>
+                        <div>Le damos una perspectiva de 600px y rotamos el elemento para poder ver el efecto 3D.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploPerspective">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>translate(x,y)</h3>
+                        <p>Traslada/mueve el elemento sobre los ejes X e Y.</p>
+                        <p>Su estructura es translate(x,y) donde x e y se refieren a la cantidad de distancia que queremos
+                            mover el elemento sobre los ejes X e Y respectivamente.</p>
+                        <div>transform: translate(50px,50px).</div>
+                        <div>Movemos 50px sobre los ejes X e Y.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploTranslate">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>translateX(x)</h3>
+                        <p>Traslada/mueve el elemento sobre el eje X.</p>
+                        <p>Su estructura es translateX(x) donde x se refiere a la cantidad de distancia que queremos mover el
+                            elemento sobre el eje X.</p>
+                        <div>transform: translateX(75px)</div>
+                        <div>Movemos 75px sobre el eje X.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploTranslateX">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>translateY(y)</h3>
+                        <p>Traslada/mueve el elemento sobre el eje Y.</p>
+                        <p>Su estructura es translateY(y) donde y se refiere a la cantidad de distancia que queremos mover el
+                            elemento sobre el eje Y.</p>
+                        <div>transform: translateY(75px)</div>
+                        <div>Movemos 75px sobre el eje Y.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploTranslateY">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>translateZ(z)</h3>
+                        <p>Traslada/mueve el elemento sobre el eje Z, es decir más cerca o más lejos del usuario.</p>
+                        <p>Su estructura es translateZ(z) donde z se refiere a la cantidad de distancia que queremos mover el
+                            elemento sobre el eje Z.</p>
+                        <div>transform: perspective(600px) translateZ(200px)</div>
+                        <div>Movemos 200px sobre el eje Z.</div>
+                        <div>Necesitamos darle perspectiva al elemento para poder ver la traslación.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploTranslateZ">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>scale(x,y)</h3>
+                        <p>Cambia las proporciones del elemento sobre los ejes X e Y.</p>
+                        <p>Su estructura es scale(x,y), donde x e y se refieren a las nuevas proporciones del elemento en los
+                            ejes X e Y respectivamente.</p>
+                        <p>Las proporciones originales equivalen a 1, por lo que 1.5 supondría un aumento del 50%.</p>
+                        <div>transform: scale(1.5,1.5)</div>
+                        <div>Cambiamos las proporciones del elemento para que sean un 50% mayores que el original.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploScale">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>scale3d(x,y,z)</h3>
+                        <p>Cambia las proporciones de un elemento sobre los ejes X, Y y Z.</p>
+                        <p>Su estructura es scale3d(x,y,z), donde x, y, y z se refieren a las nuevas proporciones del elemento
+                            en los ejes X, Y y Z respectivamente.</p>
+                        <p>Las proporciones originales equivalen a 1, por lo que 1.5 supondría un aumento del 50%.</p>
+                        <div>transform: perspective(600px) scale3d(2,2,2) rotateY(45deg)</div>
+                        <div>Cambiamos las proporciones del elemento para que sean el doble del original.</div>
+                        <div>Le damos perspectiva al elemento y lo rotamos para poder apreciar el 3D.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploScale3d">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>scaleX(x)</h3>
+                        <p>Cambia la proporción del elemento sobre el eje X.</p>
+                        <p>Su estructura es scaleX(x), donde x se refiere a la nueva proporción del elemento sobre el eje X.</p>
+                        <p>La proporción original equivale a 1, por lo que 1.5 supondría un aumento del 50%.</p>
+                        <div>transform: scaleX(1.5)</div>
+                        <div>Cambiamos la proporción del elemento en el eje X para que sea un 50% mayor que el original.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploScaleX">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>scaleY(y)</h3>
+                        <p>Cambia la proporción del elemento sobre el eje Y.</p>
+                        <p>Su estructura es scaleY(y), donde y se refiere a la nueva proporción del elemento sobre el eje Y.</p>
+                        <div>transform: scaleY(1.5)</div>
+                        <div>Cambiamos la proporción del elemento en el eje Y para que sea un 50% mayor que el original.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploScaleY">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>scaleZ(z)</h3>
+                        <p>Cambia la proporción del elemento sobre el eje Z.</p>
+                        <p>Su estructura es scaleZ(z), donde z se refiere a la nueva proporción del elemento sobre el eje Z.</p>
+                        <div>transform: perspective(600px) scaleZ(8) rotateY(45deg)</div>
+                        <div>Cambiamos la proporción del elemento en el eje Z para que sea 8 veces mayor que el original.</div>
+                        <div>Le damos perspectiva al elemento y lo rotamos para poder apreciar el 3D.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploScaleZ">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>rotate(ángulo)</h3>
+                        <p>Rota el elemento en 2D segun el ángulo indicado.</p>
+                        <p>Si el ángulo es positivo, la rotación será en el setido de las agujas del reloj.</p>
+                        <p>Si es negativo, en el sentido contrario a las agujas del reloj.</p>
+                        <div>transform: rotate(45deg)</div>
+                        <div>Rotamos el elemento 45 grados.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploRotate">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>rotate3d(x,y,z,ángulo)</h3>
+                        <p>Rota un elemento en tres dimensiones sobre un eje dado por los argumentos X, Y y Z el ángulo
+                            indicado.</p>
+                        <p>Si el ángulo es positivo, la rotación será en el setido de las agujas del reloj.</p>
+                        <p>Si es negativo, en el sentido contrario a las agujas del reloj.</p>
+                        <div>transform: perspective(600px) rotate3d(1,1,1,45deg)</div>
+                        <div>Rotamos el elemento 45 grados sobre un eje (1x,1y,1z).</div>
+                        <div>Le damos perspectiva al elemento para poder apreciar el 3D.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploRotate3d">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>rotateX(ángulo)</h3>
+                        <p>Rota el elemento sobre el eje X el ángulo indicado.</p>
+                        <p>Si el ángulo es positivo, la rotación será en el setido de las agujas del reloj.</p>
+                        <p>Si es negativo, en el sentido contrario a las agujas del reloj.</p>
+                        <div>transform: rotateX(70deg)</div>
+                        <div>Rotamos el elemento 70 grados sobre el eje X.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploRotateX">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>rotateY(ángulo)</h3>
+                        <p>Rota el elemento sobre el eje Y el ángulo indicado.</p>
+                        <p>Si el ángulo es positivo, la rotación será en el setido de las agujas del reloj.</p>
+                        <p>Si es negativo, en el sentido contrario a las agujas del reloj.</p>
+                        <div>transform: rotateY(70deg)</div>
+                        <div>Rotamos el elemento 70 grados sobre el eje Y.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploRotateY">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>rotateZ(ángulo)</h3>
+                        <p>Rota el elemento sobre el eje Z el ángulo indicado.</p>
+                        <p>Si el ángulo es positivo, la rotación será en el setido de las agujas del reloj.</p>
+                        <p>Si es negativo, en el sentido contrario a las agujas del reloj.</p>
+                        <div>transform: perspective(600px) rotateY(45deg) rotateZ(45deg)</div>
+                        <div>Rotamos el elemento 70 grados sobre el eje Z.</div>
+                        <div>Le damos perspectiva y lo rotamos sobre el eje Y para apreciar el 3D.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploRotateZ">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>skew(ánguloX, ánguloY)</h3>
+                        <p>Tuerce el elemento sobre los ejes X e Y segun los ángulos indicados.</p>
+                        <p>Su estructura es skew(ánguloX,ánguloY), donde ánguloX y ánguloY se refieren a los angulos que se
+                            tuerce el elemento sobre los ejes X e Y respectivamente.</p>
+                        <div>transform: skew(25deg,25deg)</div>
+                        <div>Torcemos el elemento 25 grados en los ejes X e Y.</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploSkew">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>skewX(ángulo)</h3>
+                        <p>Tuerce el elemento sobre el eje X segun el ángulo indicado.</p>
+                        <p>Su estructura es skewX(ángulo), donde ángulo se refiere al ángulo que se tuerce el elemento sobre el
+                            eje X.</p>
+                        <div>transform: skewX(45deg)</div>
+                        <div>Trocemos el elemento 25 grados en el eje X</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploSkewX">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>skewY(ángulo)</h3>
+                        <p>Tuerce el elemento sobre el eje Y segun el ángulo indicado.</p>
+                        <p>Su estructura es skewY(ángulo), donde ángulo se refiere al ángulo que se tuerce el elemento sobre el
+                            eje Y.</p>
+                        <div>transform: skewY(45deg)</div>
+                        <div>Trocemos el elemento 25 grados en el eje Y</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploSkewY">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>matrix(a,b,c,d,tx,ty)</h3>
+                        <p>Define una transformación 2D utilizando una matriz de 6 valores. Se utiliza para hacer
+                            transformaciones más precisas</p>
+                        <p>a, b, c, d y e son números que describen la transformación lineal.</p>
+                        <p>tx y ty son números que describén la traslación a aplicar.</p>
+                        <p>matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())</p>
+                        <div>trasnform: matrix(0.586,0.8,-0.8,0.586,40,40)</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploMatrix">Transformado</div>
+                        </div>
+                    </article>
+        
+                    <article>
+                        <h3>matrix3d(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,a4,b4,c4,d4)</h3>
+                        <p>Define una transformación 3D utilizando una matriz de 16 valores. Se utiliza para hacer
+                            transformaciones más precisas</p>
+                        <p>a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3 y d4 son números que describen la transformación lineal.</p>
+                        <p>a4 b4 y c4 son números que describén la traslación a aplicar.</p>
+                        <p>matrix3d(rotate3d(),rotateX(),rotateY(),rotateZ(),translate3d(),translateZ(),scale3d(),scaleZ()perspective())</p>
+                        <div>transform: matrix3d(1,-1,0.50,0,0.71,0.5,0.7,0,-0.5,-0.7,0.6,0,50,-50,10,1);</div>
+                        <div class="transformaciones-cajaEjemplo">
+                            <div class="transformaciones-original">Original</div>
+                            <div class="transformaciones-transformado" id="transformaciones-ejemploMatrix3d">Transformado</div>
+                        </div>
+                    </article>
+                </section>
+                
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

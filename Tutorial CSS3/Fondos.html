@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fondos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <h2>Fondos</h2>
+        <h3>El fondo es el decorado que se encuentra en la primera capa de nuestra página web, sobre él colocamos los elementos de la web
+            y con las siguientes propiedades podemos controlar la forma en la que se presenta el fondo</h3>
+            <section>
+                <article>
+                    <h3>Propiedad "background-color"</h3>
+                    <p>
+                        Esta propiedad establece el color de un elemento. El color puede especificarse de varias formas:
+                        <br><br> &bull; En RGB:
+                    </p>
+                    <div class="background-code">
+                         Código del ejemplo
+                        <div>
+                            <pre class="pre_fondos"><code>
+                                #backgroundColorRgb {
+                                    <b>rgb(227, 127, 107);</b>
+                                    width: 300px;
+                                    height: 90px;
+                                }
+                            </code></pre>
+                        </div>
+                        Resultado:
+                        <div id="backgroundColorRgb"></div>
+                    </div>
+                    <p>
+                        <br><br> &bull; En RGBA:
+                    </p>
+                    <div class="background-code">
+                         Código del ejemplo
+                        <pre class="pre_fondos"><code>
+                            #backgroundColorRgba {
+                                <b>background-color: rgba(70, 88, 192, 0.4);</b>
+                                width: 300px;
+                                height: 90px;
+                            }
+                        </code></pre> Resultado:
+                        <div id="backgroundColorRgba"></div>
+                    </div>
+                    <p>
+                        <br><br> &bull; En código hexadecimal:
+                        <div class="background-code">
+                             Código del ejemplo
+                            <pre class="pre_fondos"><code>
+                                #backgroundColorHex {
+                                    <b>background-color: #112f50;</b>
+                                    width: 300px;
+                                    height: 90px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundColorHex"></div>
+                        </div>
+                        <p>
+                            <br><br> &bull; Indicando directamente el nombre del color:
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo
+                            <pre class="pre_fondos"><code>
+                                #backgroundColorNombre {
+                                    <b>background-color: violet;</b>
+                                    width: 300px;
+                                    height: 90px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundColorNombre"></div>
+                        </div>
+                        <p>
+                            <br><br> &bull; Con el modelo hsl:
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo
+                            <pre class="pre_fondos"><code>
+                                #backgroundColorHsl {
+                                    <b>background-color: hsl(10, 90%, 56%);</b>
+                                    width: 300px;
+                                    height: 90px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundColorHsl"></div>
+                        </div>
+                        <p>
+                            <br><br> &bull; Con el modelo hsla:
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo:
+                            <pre class="pre_fondos"><code>
+                                #backgroundColorHsla {
+                                    <b>background-color: hsla(10, 90%, 56%, 0.3);</b>
+                                    width: 300px;
+                                    height: 90px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundColorHsla"></div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Propiedad "background-image"</h3>
+                        <p>
+                            Define una imagen como fondo de un elemento. <br> Para poner una imagen, hay que añadir en el archivo css la ruta relativa, absoluta, o bien, una url externa de la imagen que queramos. <br>
+                        </p>
+                        <div class="background-code">
+                            <div>
+                                 Código del ejemplo
+                                <pre class="pre_fondos"><code>
+                                    #fondoImagen{
+                                        <b>background-image: url(../img/fondo.jpg);</b>                        
+                                        width: 700px;
+                                        height: 300px;
+                                        border: 1px black solid;
+                                        background-size: 720px 390px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="fondoImagen"></div>
+                        </div>
+                        <br>
+                        <p>
+                            Para poner varias imágenes de fondo tenemos que separar las url por comas. El orden de las url es importante, los fondos estarán unos sobre otros ordenados de más abajo a más arriba.
+                        </p>
+                        <div class="background-code">
+                            <div>
+                                 Código del ejemplo
+                                <pre class="pre_fondos"><code>
+                                    #fondoVariasImgs {
+                                        <b>background-image: url("../img/fondo_pajaros.png "), 
+                                            url("../img/cielo.jpg ");</b>                                
+                                        width: 700px;
+                                        height: 300px;
+                                        border: 1px black solid;
+                                        background-size: 720px 390px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado
+                            <div id="fondoVariasImgs"></div>
+                        </div>
+                        <br>
+                        <p>
+                            También podemos definir como fondo de imagen un degradado lineal. <br>Para profundizar sobre los degradados:
+                            <a href="https://www.w3schools.com/css/css3_gradients.asp ">Documentación degradados</a>
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo
+                            <div>
+                                <pre class="pre_fondos"><code>
+                                    #fondoDegradado {
+                                        <b>background-image: linear-gradient(gray, black);</b>
+                                        width: 720px;
+                                        height: 390px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="fondoDegradado"></div>
+                        </div>
+                        <br>
+                        <p>Consta de 3 propiedades:</p>
+                        <ul class="background-lista">
+                            <li> none: es la propiedad por defecto, no se mostrará ninguna imagen de fondo.</li>
+                            <li> initial: establece la propiedad a su valor predeterminado.</li>
+                            <li> inherit: la propiedad hereda del elemento padre.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Propiedad "background-repeat "</h3>
+                        <p>
+                            Especifica si el fondo se repite y de qué manera. Admite los siguientes valores:
+                            <br><br> &bull; repeat: el fondo se repite horizontal y verticalmente. Es la que se le aplica por defecto.
+                        </p>
+                        <div class="background-code">
+                            <div>
+                                 Código del ejemplo
+                                <pre class="pre_fondos"><code>
+                                    #backgroundRepeat {
+                                        <b>background-repeat: repeat;</b>
+                                        width: 700px;
+                                        height: 300px;
+                                        border: 1px black solid;
+                                        background-image: url(../img/fondo.jpg);
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="backgroundRepeat"></div>
+                        </div>
+                        <br>
+                        <p>
+                            <br><br> &bull; repeat-x: el fondo se repite en horizontal.
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo
+                            <div>
+                                <pre class="pre_fondos"><code>
+                                    #backgroundRepeatX {
+                                        <b>background-repeat: repeat-x;</b>
+                                        width: 300px;
+                                        height: 200px;
+                                        border: 1px black solid;
+                                        background-image: url(../img/fondo.jpg);
+                                        background-size: 100px 100px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="backgroundRepeatX"></div>
+                        </div>
+                        <p>
+                            <br><br> &bull; repeat-y: el fondo se repite en vertical.
+                        </p>
+                        <div class="background-code">
+                             Código del ejemplo
+                            <div>
+                                <pre class="pre_fondos"><code>
+                                    #backgroundRepeatY {
+                                        <b>background-repeat: repeat-y;</b>
+                                        width: 300px;
+                                        height: 200px;
+                                        border: 1px black solid;
+                                        background-image: url(../images/fondo.jpg);
+                                        background-size: 100px 100px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="backgroundRepeatY"></div>
+                        </div>
+                        <p>
+                            <br><br> &bull; no-repeat: el fondo no se repite.
+                        </p>
+                        <div class="background-code">
+                            Código del ejemplo:
+                            <div>
+                                <pre class="pre_fondos"><code>
+                                    #backgroundNoRepeat {
+                                        <b>background-repeat: no-repeat;</b>
+                                        width: 300px;
+                                        height: 200px;
+                                        border: 1px black solid;
+                                        background-image: url(../images/fondo.jpg);
+                                        background-size: 100px 100px;
+                                    }
+                                </code></pre>
+                            </div>
+                            Resultado:
+                            <div id="backgroundNoRepeat"></div>
+                        </div>
+                    </article>
+                    <article>
+                        <h3>Propiedad "background-attachment"</h3>
+                        <p>La propiedad background-attachment establece si una imagen de fondo es fija o se desplaza con el resto de la página.</p>
+                        <h4>scroll:</h4>
+                        <p>El fondo se desplaza junto con el elemento (predeterminado).</p>
+                        
+                        <div class="background-code">
+                            Código del ejemplo:
+                            <pre class="pre_fondos"><code>
+                                #backgroundattachmentscrollejemplo {
+                                    background-image:url("../img/backgroundVictorLogoCSS.png");
+                                    background-repeat: no-repeat;
+                                    background-attachment: scroll;  
+                                    border: 1px solid black;
+                                    margin: 5px 0px 5px 0px;
+                                    width: 300px;
+                                    height: 300px;
+                                    background-size: 300px 200px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundattachmentscrollejemplo">
+                                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis maiores rerum in omnis ea, iste nisi, temporibus eos adipisci ad. Quidem velit nam voluptate quam enim voluptates ut, amet.</div>
+                                <div>Repudiandae earum fugit quasi perspiciatis accusantium atque numquam dolor molestiae id alias </div>
+                            </div>
+                        </div>
+                        <h4>fixed:</h4>
+                        <p>El fondo está fijo con respecto a la ventana gráfica</p>
+                        
+                        <div class="background-code">
+                                Código del ejemplo:
+                                <pre class="pre_fondos"><code>
+                                    #backgroundattachmentfixed {
+                                        background-image: url("../img/backgroundVictorLogoCSS.png");
+                                        background-repeat: no-repeat;
+                                        background-attachment: fixed;
+                                        border: 1px solid black;
+                                        background-position: 200px;
+                                        margin: 5px 0px 5px 0px;
+                                        height: 500px;
+                                        
+                                    }
+                                </code></pre> Resultado:
+                                <div id="backgroundattachmentfixed">
+    
+                            </div>
+                        </div>
+                        <h4>local:</h4>
+                        <p>El fondo se desplaza junto con el contenido del elemento</p>
+                        <div class="background-code">    
+                            Código del ejemplo:
+                            <pre class="pre_fondos"><code>
+                                #backgroundattachmentlocalejemplo {
+                                    background-image: url("../img/backgroundVictorLogoCSS.png");
+                                    background-repeat: no-repeat;
+                                    background-attachment: local;
+                                    border: 1px solid black;
+                                    margin: 5px 0px 5px 0px;
+                                    width: 300px;
+                                    height: 300px;
+                                }
+                            </code></pre> Resultado:
+                            <div id="backgroundattachmentlocalejemplo">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quod illo minus facilis sint praesentium in, explicabo ex facere incidunt accusantium est animi minima. Ducimus autem </p>
+                            </div>
+                            <div>
+                                <h4>Initial:</h4>
+                                <p>Establece esta propiedad a su valor predeterminado.</p>
+                                <h4>inherit:</h4>
+                                <p>Hereda esta propiedad de su elemento principal.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <h4>Propiedad "background-position"</h4>
+                        <p>La propiedad de posición de fondo establece la posición de inicio de una imagen de fondo.</p>
+                        <p>De forma predeterminada, una imagen de fondo se coloca en la esquina superior izquierda de un elemento y se repite tanto vertical como horizontalmente.</p>
+                        <p>Si solo especifica una palabra clave, el otro valor será "center"</p>
+                        <p>Los posibles valores son:</p>
+                        <ul class="lista">
+                            <li>left top</li>
+                            <li>left center</li>
+                            <li>left bottom</li>
+                            <li>right top</li>
+                            <li>right center</li>
+                            <li>right bottom</li>
+                            <li>center top</li>
+                            <li>center center</li>
+                            <li>center bottom</li>
+                        </ul>
+                        <div class="background-code">
+                            Código del ejemplo:
+                            <pre class="pre_fondos"><code>
+                                #backgroundpositionleft{
+                                    background-image: url('../img/backgroundVictorLogoCSS.png');
+                                    background-repeat: no-repeat;
+                                    background-position: right center; 
+                                    border: 1px solid black;
+                                    margin: 5px 0px 5px 0px;
+                                }
+                            </code></pre>Resultado:
+                            <div id="backgroundpositionleft">
+                                
+                            </div>
+                        </div>
+                        <p>%X %Y</p>
+                        <p>El primer valor es la posición horizontal y el segundo valor es la vertical.</p>
+                            <br> La esquina superior izquierda es 0% 0%. La esquina inferior derecha es 100% 100%.
+                            <br> Si solo especifica un valor, el otro valor será 50%.
+                            <br> El valor predeterminado es: 0% 0%</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat minus libero? Repellendus aut a odio corporis itaque quos doloremque, voluptatibus ullam asperiores odit blanditiis consequuntur modi explicabo libero incidunt.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat minus libero? Repellendus aut a odio corporis itaque quos doloremque, voluptatibus ullam asperiores odit blanditiis consequuntur modi explicabo libero incidunt.</p>
+                                <div class="background-code">
+                                    Código del ejemplo:
+                                    <pre class="pre_fondos"><code>
+                                        #backgroundpositionporcentaje {
+                                            background-image: url('../img/backgroundVictorLogoCSS.png');
+                                            background-repeat: no-repeat;
+                                            background-position: 100% 100%; 
+                                            border: 1px solid black;
+                                            margin: 5px 0px 5px 0px;
+                                        }
+                                    </code></pre>Resultado:
+                                    <div id="backgroundpositionporcentaje">
+                                        
+                                    </div>
+                                </div>
+                                <p>xpos ypos</p>
+                                <p>El primer valor es la posición horizontal y el segundo valor es la vertical.</p>
+                                    <br>La esquina superior izquierda es 0 0.
+                                    <br>Las unidades pueden ser píxeles (0px 0px) o cualquier otra unidad CSS.
+                                    <br>Si solo especifica un valor, el otro valor será 50%. Puedes mezclar% y posiciones
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat minus libero? Repellendus aut a odio corporis itaque quos doloremque, voluptatibus ullam asperiores odit blanditiis consequuntur modi explicabo libero incidunt.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat minus libero? Repellendus aut a odio corporis itaque quos doloremque, voluptatibus ullam asperiores odit blanditiis consequuntur modi explicabo libero
+                                        incidunt.</p>
+                                        <div class="background-code">
+                                            Código del ejemplo:
+                                            <pre class="pre_fondos"><code>
+                                                #backgroundpositionpixels {
+                                                    background-image: url('../img/backgroundVictorLogoCSS.png');
+                                                    background-repeat: no-repeat;
+                                                    background-position: 1060px 0px; 
+                                                    border: 1px solid black;
+                                                    margin: 5px 0px 5px 0px;
+                                                }
+                                            </code></pre>Resultado:
+                                            <div id="backgroundpositionpixels">
+                                                
+                                            </div>
+                                            <div>
+                                                <h4>initial:</h4>
+                                                <p>Establece esta propiedad a su valor predeterminado.</p>
+                                                <h5>inherit:</h5>
+                                                <p>Hereda esta propiedad de su elemento principal.</p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    
+                                    <article>
+                                        <h4>Propiedad "background-origin"</h4>
+                                        <p>La propiedad de origen de fondo especifica dónde se coloca la imagen de fondo.</p>
+                                            <p>Nota: Si la propiedad background-attachment está establecida en "fixed", esta propiedad no tiene ningún efecto.</p>
+                                            
+                                            <h4>padding-box</h4>
+                                            <p>Valor por defecto. La imagen de fondo comienza desde la esquina superior izquierda del borde de relleno</p>
+                                            <div class="background-code">
+                                                Código del ejemplo:
+                                                <pre class="pre_fondos"><code>
+                                                    #backgroundoriginpadding {
+                                                        background-image: 
+                                                        url('..//backgroundVictorLogoCSS.png');
+                                                        background-origin: padding-box;
+                                                        background-position: 100% 100%;
+                                                        background-repeat: no-repeat;
+                                                        border: 15px solid black;
+                                                        margin: 5px 0px 5px 0px;
+                                                        padding: 20px;
+                                                    }
+                                                </code></pre>Resultado:
+                                                <div id="backgroundoriginpadding">
+                                                    
+                                                </div>
+                                            </div>
+                                            <h4>border-box</h4>
+                                            <p>La imagen de fondo comienza desde la esquina superior izquierda del borde</p>
+                                            <div class="background-code">
+                                                Código del ejemplo:
+                                                <pre class="pre_fondos"><code>
+                                                    #backgroundoriginborder {
+                                                        background-image: 
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-origin: border-box;
+                                                        background-position: 100% 100%;
+                                                        background-repeat: no-repeat;
+                                                        border: 15px solid black;
+                                                        margin: 5px 0px 5px 0px;
+                                                        padding: 20px;
+                                                    }
+                                                </code></pre>Resultado:
+                                                <div id="backgroundoriginborder">
+                                                    
+                                                </div>
+                                            </div>
+                                            <h4>content-box</h4>
+                                            <p>La imagen de fondo comienza desde la esquina superior izquierda del contenido</p>
+                                            <div class="background-code">
+                                                Código del ejemplo:
+                                                <pre class="pre_fondos"><code>
+                                                    #backgroundorigincontent {
+                                                        background-image: 
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-origin: content-box;
+                                                        background-position: 100% 100%;
+                                                        background-repeat: no-repeat;
+                                                        border: 15px solid black;
+                                                        margin: 5px 0px 5px 0px;
+                                                        padding: 20px;  
+                                                    }
+                                                </code></pre>Resultado:
+                                                <div id="backgroundorigincontent">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4>initial:</h4>
+                                                <p>Establece esta propiedad a su valor predeterminado.</p>
+                                                <h5>inherit:</h5>
+                                                <p>Hereda esta propiedad de su elemento principal.</p>
+                                            </div>
+                                        </article>
+                                        <article>
+                                            <h3>Propiedad "background-clip"</h3>
+                                            <p>Define cuánto debe extenderse el fondo dentro del elemento.</p>
+                                            
+                                            <div id="background-clip">
+                                                <p><strong>Nota:&nbsp</strong>La propiedad background-clip no es soportada por Internet Explorer 8 y versiones anteriores.</p>
+                                                
+                                                <p>Sin background-clip (border-box como predeterminado):</p>
+                                                <p>El fondo se extiende completamente a través del elemento, incluso bajo el borde.</p>
+                                                
+                                                <div class="background-code">
+                                                    Código del ejemplo
+                                                    <pre class="pre_fondos"><code>
+                                                        #background-clip-ejemplo1 {
+                                                            border: 10px dotted black;
+                                                            padding: 35px;
+                                                            background:yellow;
+                                                        }
+                                                    </code></pre>Resultado:
+                                                    <div id="background-clip-ejemplo1">
+                                                        
+                                                        <h2>Lorem Ipsum Chanante</h2>
+                                                        <p>Chanante ipsum dolor sit amet, vivo con tu madre en un castillo adipisicing chachachá aliqua nisi, quis páharo mamellas. Soooy crossoverr labore con las rodillas in the guanter veniam tollina elit, piticli regomello to sueltecico
+                                                            nisi ut mangurrián ad. Enim hueles avinagrado ju-já dolore cartoniano sed eiusmod elit nui. Horcate pero qué pelazo artista cascoporro.</p>
+                                                        </div>
+                                                    </div>
+                                                    <br />
+                                                    <p>Aplicando background-clip: padding-box:</p>
+                                                    <p>El fondo se extiende ajustándose al padding.</p>
+                                                   
+                                                            <div class="background-code">
+                                                                Código del ejemplo
+                                                                <pre class="pre_fondos"><code>
+                                                                    #background-clip-ejemplo2 {
+                                                                        border: 10px dashed black;
+                                                                        padding: 35px;
+                                                                        background: hsl(172, 64%, 46%);
+                                                                        background-clip: padding-box;
+                                                                    }
+                                                                </code></pre>Resultado:
+                                                                <div id="background-clip-ejemplo2">
+                                                                    <h2>Lorem Ipsum Lucas</h2>
+                                                                    <p>Lucas ipsum dolor sit amet jobal croke clawdite naberrie cody ortolan nar momaw bertroff paploo. Iv balosar maul boltrunians sidious kessel solo arkanis. Yoda caedus koon rishii hutt hutt boz. Drovian rotta valorum tatooine lando.
+                                                                        Yuzzem tahiri alderaan lannik utapau jinn boba cathar. Ima-gun lepi gordin tython vel vebb yowza. Darth crynyd jettster kowakian plagueis. Jamillia tierce talortai dressellian amidala. Moff weequay kal terrik terentatek gunray
+                                                                        sykes nute. Quelli c-3p0 bando sulorine. Artaru yowza jango droopy vima-da-boda</p>
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <p>Aplicando background-clip: content-box:</p>
+                                                        <p>El fondo se extiende ajustándose al contenido.</p>
+                                                                <div class="background-code">
+                                                                    Código del ejemplo
+                                                                    <pre class="pre_fondos"><code>
+                                                                        #background-clip-ejemplo3 {
+                                                                            border: 10px groove black;
+                                                                            padding: 35px;
+                                                                            background: hsl(172, 64%, 46%);
+                                                                            background-clip: content-box;
+                                                                        }
+                                                                    </code></pre>Resultado:
+                                                                    <div id="background-clip-ejemplo3">
+                                                                        <h2>Lorem Ipsum DeLorean</h2>
+                                                                        <p>My insurance, it's your car, your insurance should pay for it. Hey, I wanna know who's gonna pay for this? I spilled beer all over it when that car smashed into me. Who's gonna pay my cleaning bill? You don't understand. Get your
+                                                                            meat hooks off of me. You're gonna be in the car with her. Hey, don't I know you from somewhere?.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article>
+                                                        <h3>Propiedad "background-size"</h3>
+                                                        <p>La propiedad background-size define el tamaño de la imagen de fondo.</p>
+                                                        <div>
+                                                            <h3>BACKGROUND-SIZE: AUTO AUTO;</h3>
+                                                            <p>La imagen de fondo mantendrá su tamaño original por defecto, o si aplicamos el tamaño con auto.</p>
+                                                            <p>Por ejemplo, esta imagen de fondo tiene un tamaño de 1024 x 835 px.&nbspEs mayor que su contenedor, de 150px de alto, por lo que se le aplica un clippeo que la extiende hasta el límite marcado por el borde</p>
+                                                            <div class="background-code">
+                                                                Código del ejemplo
+                                                                <pre class="pre_fondos"><code>
+                                                #background-size-ejemplo1-aplicado {
+                                                    background-size: auto auto;
+                                                    background-image: 
+                                                    url(../img/La%20Noche%20Estrellada.jpg);
+                                                    background-repeat: no-repeat;
+                                                    height: 150px;
+                                                    padding: 0;
+                                                    border: 10px dashed rgba(0, 0, 255, 0.37);
+                                                }
+                                                                </code></pre>Resultado:
+                                                                <div id="background-size-ejemplo1-aplicado"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <h3>BACKGROUND-SIZE: 120px 80px;</h3>
+                                                            <p>La imagen de fondo se adaptará al tamaño definido en píxels.&nbspEl primer valor es el tamaño horizontal y el segundo el vertical.</p>
+                                                            <div class="background-code">
+                                                                Código del ejemplo
+                                                                <pre class="pre_fondos"><code>
+                                                    #background-size-ejemplo2-aplicado {
+                                                        background-size: 120px 80px;
+                                                        background-image: 
+                                                        url(../img/La%20Noche%20Estrellada.jpg);
+                                                        background-repeat: no-repeat;
+                                                        height: 150px;
+                                                        padding: 0;
+                                                        border: 10px dashed rgba(0, 0, 255, 0.37);
+                                                    }
+                                                                </code></pre>Resultado:
+                                                                <div id="background-size-ejemplo2-aplicado"></div>
+                                                            </div>
+    
+                                                        </div>
+                                                        <div>
+                                                            <h3>BACKGROUND-SIZE: 50% 50%;</h3>
+                                                            <p>Se puede usar porcentajes como valores también.&nbspPrecaución, esto puede alterar la relación de aspecto de la imagen de fondo, y llevar a resultados inesperados</p>                                              
+                                                                <div class="background-code">
+                                                                    Código del ejemplo
+                                                                    <pre class="pre_fondos"><code>
+                                                    #background-size-ejemplo3-aplicado {                          
+                                                        background-size: 50% 50%;
+                                                        background-image: 
+                                                        url(../img/La%20Noche%20Estrellada.jpg);
+                                                        background-repeat: no-repeat;
+                                                        height: 150px;
+                                                        padding: 0;
+                                                        border: 10px dashed rgba(0, 0, 255, 0.37);
+                                                    }
+                                                                    </code></pre>Resultado:
+                                                                    <div id="background-size-ejemplo3-aplicado"></div>
+                                                                </div>
+    
+                                                            </div>
+                                                            <div>
+                                                                <h3>BACKGROUND-SIZE: CONTAIN;</h3>
+                                                                <p>La palabra clave contain redimensionará el fondo para asegurarse de que permanece completamente visible.</p>
+                                                                <p></p>
+                                                                <div class="background-code">
+                                                                    Código del ejemplo
+                                                                    <pre class="pre_fondos"><code>
+                                                    #background-size-ejemplo4-aplicado {
+                                                        background-size: contain;
+                                                        background-image: 
+                                                        url(../img/La%20Noche%20Estrellada.jpg);
+                                                        background-repeat: no-repeat;
+                                                        height: 150px;
+                                                        padding: 0;
+                                                        border: 10px dashed rgba(0, 0, 255, 0.37);
+                                                    }
+                                                                    </code></pre>Resultado:
+                                                                    <div id="background-size-ejemplo4-aplicado"></div>
+                                                                </div>
+    
+                                                            </div>
+                                                            <div>
+                                                                <h3>BACKGROUND-SIZE: COVER;</h3>
+                                                                <p>La palabra clave cover redimensionará el fondo para asegurarse de que el elemento es totalmente cubierto.</p>
+                                                                <p></p>
+                                                                <div class="background-code">
+                                                                    Código del ejemplo
+                                                                    <pre class="pre_fondos"><code>
+                                                    #background-size-ejemplo5-aplicado {
+                                                        background-size: cover;
+                                                        background-image: 
+                                                        url(../img/La%20Noche%20Estrellada.jpg);
+                                                        background-repeat: no-repeat;
+                                                        height: 150px;
+                                                        padding: 0;
+                                                        border: 10px dashed rgba(0, 0, 255, 0.37);
+                                                    }
+                                                                    </code></pre>Resultado:
+                                                                    <div id="background-size-ejemplo5-aplicado"></div>
+                                                                </div>
+    
+                                                            </div>
+                                                        </article>
+                                                        <article>
+                                                            <h3>Propiedad "background-blend-mode"</h3>
+                                                            <p>La propiedad background-blend-mode define el modo de fusión de cada capa de fondo (color y / o imagen).</p>
+                                                            <p>Los diferentes valores posibles son:</p>
+                                                            <div>
+                                                                <ul class="lista">
+                                                                    <li><b>normal:</b>Predeterminado. Establece el modo de fusión en normal</li>
+                                                                    <li><b>multiply:</b> Establece el modo de fusión a multiplicar</li>
+                                                                    <li><b>screen:</b> Establece el modo de fusión en la pantalla </li>
+                                                                    <li><b>overlay:</b> Establece el modo de fusión para superponer </li>
+                                                                    <li><b>darken:</b> Establece el modo de fusión para oscurecer </li>
+                                                                    <li><b>lighten:</b> Establece el modo de fusión para aligerar </li>
+                                                                    <li><b>color-dodge:</b> Establece el modo de fusión para esquivar el color</li>
+                                                                    <li><b>saturation:</b> Establece el modo de fusión en saturación</li>
+                                                                    <li><b>color:</b> Establece el modo de fusión para colorear</li>
+                                                                    <li><b>luminosity:</b> Establece el modo de fusión en luminosidad.</li>
+                                                                </ul>
+                                                            </div>
+                                                           
+                                                            <div class="background-code">
+                                                               Resultado:
+                                                                <div id="backgroundblendmodenormal">
+                                                                    < class="pre_fondos"pre><code>
+                                                    Código del ejemplo
+                                                    #backgroundblendmodenormal {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat:no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%, white 100%), 
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode: normal;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodedodge">
+                                                                    < class="pre_fondos"pre><code>
+                                                    Código del ejemplo
+                                                    #backgroundblendmodedodge {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat:no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%, white 100%), 
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode: color-dodge;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodemultiply">
+                                                                     class="pre_fondos"<pre><code>
+                                                   Código del ejemplo
+                                                    #backgroundblendmodemultiply {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%),  
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:multiply;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodescreen">
+                                                                     class="pre_fondos"<pre><code>
+                                                   Código del ejemplo
+                                                    #backgroundblendmodescreen {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%), 
+                                                         url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:screen;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                   Resultado:
+                                                                <div id="backgroundblendmodeoverlay">
+                                                                    <pre class="pre_fondos"><code>
+                                                    Código del ejemplo                
+                                                    #backgroundblendmodeoverlay {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%), 
+                                                         url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:overlay;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                   Resultado:
+                                                                <div id="backgroundblendmodedarken">
+                                                                     class="pre_fondos"<pre><code>
+                                                   Código del ejemplo
+                                                    #backgroundblendmodedarken {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%), 
+                                                         url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:darken;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodelighten">
+                                                                 class="pre_fondos"    <pre><code>
+                                               Código del ejemplo
+                                                #backgroundblendmodelighten {
+                                                    width: 100%;
+                                                    height: 200px;
+                                                    background-size: 200px 200px;
+                                                    background-repeat: no-repeat;
+                                                    background-image: linear-gradient(to right, black 0%,white 100%), 
+                                                     url('../img/backgroundVictorLogoCSS.png');
+                                                    background-blend-mode:lighten;
+                                                }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodesaturation">
+                                                                  class="pre_fondos"   <pre><code>
+                                                Código del ejemplo
+                                                #backgroundblendmodesaturation {
+                                                    width: 100%;
+                                                    height: 200px;
+                                                    background-size: 200px 200px;
+                                                    background-repeat: no-repeat;
+                                                    background-image: linear-gradient(to right, black 0%,white 100%),
+                                                    url('../img/backgroundVictorLogoCSS.png');
+                                                    background-blend-mode:saturation;
+                                                }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                               Resultado:
+                                                                <div id="backgroundblendmodecolor">
+                                                                     class="pre_fondos"<pre><code>
+                                                   Código del ejemplo
+                                                    #backgroundblendmodecolor {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%),
+                                                          url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:color;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                            <div class="background-code">
+                                                                  Resultado:
+                                                                <div id="backgroundblendmodeluminosity">
+                                                                     class="pre_fondos"<pre><code>
+                                                   Código del ejemplo
+                                                    #backgroundblendmodeluminosity {
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        background-size: 200px 200px;
+                                                        background-repeat: no-repeat;
+                                                        background-image: linear-gradient(to right, black 0%,white 100%),
+                                                        url('../img/backgroundVictorLogoCSS.png');
+                                                        background-blend-mode:luminosity;
+                                                    }
+                                                                    </code></pre>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                        <article>
+                                                            <h3>Propiedad "background shorthand"</h3>
+                                                            <p>La propiedad abreviada background establece todas las propiedades del fondo en una sola declaración</p>
+                                                            <p>Las propiedades que pueden ser establecidas, en ese orden, son:</p>
+                                                            <ul class="lista">
+                                                                <li>background-color</li>
+                                                                <li>background-image</li>
+                                                                <li>background-position</li>
+                                                                <li>background-size</li>
+                                                                <li>background-repeat</li>
+                                                                <li>background-origin</li>
+                                                                <li>background-clip</li>
+                                                                <li>background-attachment.</li>
+                                                            </ul>
+                                                            <p>No importa si alguno de los valores falta, por ejemplo, background:#ff0000 url(imagen.gif); está permitido.</p>
+                                                            <div id="background-shorthand">
+                                                                <p><strong>Nota:&nbsp</strong>Internet Explorer 8 y versiones anteriores no soporta múltiples imágenes de fondo en un elemento.</p>
+                                                                <p><strong>Nota:&nbsp</strong>Si una de las propiedades en la declaración abreviada es la propiedad bg-size, se debe usar una / (barra inclinada) para separarla de la propiedad bg-position, por ejemplo <code>background:url(sonrisa.gif) 10px 20px/50px 50px;</code>                        dará como resultado una imagen de fondo, colocada a 10 píxels desde la izquierda, 20 píxels desde la parte superior, y el tamaño de la imagen será de 50 píxels de ancho por 50 píxels de alto.</p>
+                                                                <p><strong>Nota:&nbsp</strong>Si se usan múltiples fuentes como imágenes de fondo, pero también se desea un color de fondo, el parámetro de background-color debe ir al final en la lista</p>
+                                                                
+                                                                <p>Aplicamos varias propiedades al mismo tiempo.</p>
+                                                                <p>Chanante ipsum dolor sit amet, vivo con tu madre en un castillo adipisicing chachachá aliqua nisi, quis páharo mamellas. Soooy crossoverr labore con las rodillas in the guanter veniam tollina elit, piticli regomello to sueltecico nisi
+                                                                    ut mangurrián ad. Enim hueles avinagrado ju-já dolore cartoniano sed eiusmod elit nui. Horcate pero qué pelazo artista cascoporro.</p>
+                                                                    <div class="background-code">
+                                                                      
+                                                                   class="pre_fondos"      <pre><code>
+                                                 Código del ejemplo
+                                                #background-shorthand-ejemplo-aplicado {
+                                                    line-height:normal;
+                                                    min-height: 22rem;
+                                                    background: 
+                                                    url(../img/Tierra.gif) right center/contain  repeat-y,
+                                                    url(../img/Tierra.gif) center center/auto auto repeat-y,
+                                                    url(../img/Paisaje.jpg) left center /contain no-repeat #ccc;
+                                                    padding: 15px;
+                                                }
+                                                                        </code></pre>Resultado:<br>
+                                                                        <div id="background-shorthand-ejemplo-aplicado"></div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </article>
+    
+            </section>
+
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

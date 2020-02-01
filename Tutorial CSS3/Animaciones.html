@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Animaciones</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/animation_pause.js"></script>
+</head>
+<body>
+	<h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+
+        </ul>
+    </nav>
+    <main>
+    <h2>Animaciones</h2>
+    <h3>Guía de animaciones en CSS3: Con animaciones podemos desplazar y/o cambiar de color un elemento en un espacio de tiempo.</h3>
+
+    <section>
+
+        <article>
+            <h3>animation-name</h3>
+
+            <p>Toda animación en CSS3 consta de 2 propiedades básicas, sin éstas, no podría existir una animación. La primera de ellas 
+            es <cite>animation-name</cite>, esta propiedad asocia el elemento que se desea animar con la regla específica que desencadenará 
+            el proceso de animación. Veamos un ejemplo: </p>
+
+            <div>
+                <pre>
+                    #ejemplo {
+                        width: 100px;
+                        height: 100px;
+                        background-color: orange;
+                        <b>animation-name: ej_anim;</b>
+                        animation-duration: 15s;
+                    }
+                    
+                    <b>@keyframes ej_anim</b> {
+                        [...]
+                    }
+                </pre>
+            </div>
+
+            <p>El fragmento de código anterior es un ejemplo de cómo se hace una "llamada" a la regla de una animación. Si se observa 
+            en la regla que hace referencia al id <cite>#ejemplo</cite>, donde se definen las características del objeto a animar 
+            (color, forma, tamaño, etc) del que partirá la animación, vemos también en negrita la propiedad <cite>animation-name</cite> que, 
+            como valor, posee el nombre de la regla que desencadenará la animación.</p>
+
+            <p>Posteriormente, se puede apreciar una segunda regla llamada "@keyframes ej_anim", esta regla será la encargada 
+            de desencadenar la propia animación y, en su interior, contiene una serie de propiedades y valores que determinarán 
+            la posición y/o el color a lo largo del tiempo, entre otras cosas que se verán a continuación, del elemento a animar. En este 
+            caso, el elemento a animar se trataría del elemento con el id <cite>#ejemplo</cite>.</p>
+
+        </article>
+
+        <article>
+            <h3>@keyframes</h3>
+
+            <p>Antes de ver la segunda propiedad esencial para ejecutar una animación, vamos a ver la regla  <cite>@keyframes</cite> y como 
+                se pueden definir propiedades de formas diferentes. Veamos un par de ejemplos: </p>
+
+            <div><h4>Ejemplo 1: from...to.</h4></div>
+
+            <div>
+                <pre>
+                    @keyframes ej_anim {
+                        from  {background-color:red; left: 0px;}
+                        to {background-color:blueviolet; left: 400px;}
+                    }
+                </pre>
+            </div>
+
+            <p>La primera forma con la que se pueden definir propiedades en la regla @keyframes es utilizando las palabras "from" y "to". 
+            Como su propio significado indica, la animación comenzará desde un estado de partida "from" y concluirá en un estado de 
+            finalización "to", es decir, que adquiere diferentes valores desde un punto inicial hasta uno final. En este ejemplo la 
+            animación variará su color del rojo con una posición de separación con el margen izquierdo de 0px hasta el color violeta con 
+            una separación de 400px.</p>
+
+            <div>
+                <div id="anim0_1"></div>
+            </div>
+            
+            <div><h4>Ejemplo 2: porcentajes.</h4></div>
+            
+            <div>
+                <pre>
+                    @keyframes ej_anim {
+                        10%  {background-color:orange; left:0px; top:0px;}
+                        25%  {background-color:yellow; left:200px; top:0px;}
+                        50%  {background-color:green; left:400px; top:0px;}
+                        75%  {background-color:blue; left:200px; top:0px;}
+                        100% {background-color:blueviolet; left:0px; top:0px;}
+                    }
+                </pre>
+            </div>
+
+            <p>La otra forma con la que se puede definir las propiedades que ejecutará la animación es con porcentajes. Como se puede apreciar 
+            en el código de arriba, los porcentajes designan en qué momento del tiempo que durará la animación se alcanzará la siguiente 
+            modificación. Siguiendo el ejemplo de arriba, cuando la animación se haya ejecutado en un 25% de su duración total, habrá alcanzado 
+            el color amarillo y una distancia del margen izquierdo de 200px.</p>
+
+            <div>
+                <div id="anim0_2"></div>
+            </div>
+            
+        </article>
+
+        <article>
+            <h3>animation-duration</h3>
+
+            <p>La segunda propiedad imprescindible en toda animación es <cite>animation-duration</cite>, esta propiedad determina cuántos segundos
+            durará dicha animación. Veamos como ejemplo el siguiente código:</p>
+
+            <div>
+                <pre>
+                    #luzroja {
+                        width: 100px;
+                        height: 100px;
+                        background-color: rgb(255, 0, 0);
+                        border-radius: 100%;
+                        animation-name: luz_roja;
+                        <b>animation-duration: 15s;</b>
+                        animation-iteration-count: infinite;
+                    }
+                    
+                    @keyframes luz_roja {
+                        <b>15%</b> {background-color: rgb(255, 0, 0);} 
+                        <b>20%</b> {background-color: rgba(194, 0, 0, 0.829);}
+                        <b>60%</b> {background-color: rgba(194, 0, 0, 0.829);}
+                        <b>65%</b> {background-color: rgb(255, 0, 0);}
+                        <b>100%</b> {background-color: rgb(255, 0, 0);}
+                    }
+                </pre>
+            </div>
+
+            <p>Como se puede apreciar en el código de arriba tenemos la regla que hacen referencia al id #luzroja y, 
+            dentro de ésta, la propiedad <cite>animation-duration</cite>. Dicha propiedad determina la duración de la animación, 
+            en este caso, será de 15 segundos.</p>
+
+            <p>Una vez hemos fijado el tiempo de la animación (15s) podemos determinar cuando se realizarán cambios dentro de la misma
+            con porcentajes. De forma que, usando el ejemplo de arriba, podemos apreciar que la luz roja parte de un estado inical en la regla 
+            #luzroja usando como color de fondo "rgb(255, 0, 0)", mientras que, dentro de la regla "@keyframes luz_roja" determinamos con porcentajes 
+            en qué momento de esos 15 segundos se van a producir cambios en la animación (en este ejemplo, los cambios solo serán de variación 
+            de color).</p>
+
+            <div>
+                <div id="anim1">
+                    <div id="semaforo">
+                        <div id="luzroja"></div>
+                        <div id="luzambar"></div>
+                        <div id="luzverde"></div>
+                    </div>
+                    <div id="poste"></div>
+                </div>
+            </div>
+
+            <p>Ejemplo 2</p>
+            <div>
+                <pre>
+                    #animation-duration-10
+                        {
+                        width: 100px;
+                        height: 50px;
+                        background: rgb(209, 86, 86);
+                        position: relative;
+                        animation: animation-duration infinite;
+                        animation-duration: 10s;
+                        }
+                    @keyframes animation-duration {
+                        from {left: 0px;}
+                        to {left: 800px;}
+                        }
+                </pre>
+            </div>
+
+                <!-- animation-duration-1 -->
+                <div>animation-duration : 1s</div>
+                <div id="animation-duration-1"></div>
+                <!-- animation-duration-5 -->
+                <div>animation-duration : 5s</div>
+                <div id="animation-duration-5"></div>
+                <!-- animation-duration-10 -->
+                <div>animation-duration : 10s</div>
+                <div id="animation-duration-10"></div>
+        </article>
+
+        <article>
+            <h3>animation-delay</h3>
+
+            <p>Especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación.
+                    <br>Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
+                    <br>Su valor por defecto es 0, a menos que indiquemos alguno en segundos o milisegundos.
+                <br>Ej.: 20s --> Segundos
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20ms --> Milisegundos</p>
+
+            <div>
+                <pre>
+                    #animation-delay-15 {
+                        width: 140px;
+                        height: 50px;
+                        background: rgb(137, 96, 156);
+                        position: relative;
+                        animation: animation-delay 10s infinite;
+                        animation-delay: 2s;
+                        }
+
+
+                        @keyframes animation-delay {
+                        0% {left: 0px;}
+                        50% {left: 50px; background: indigo}
+                        100% {left: 600px;}
+                        }
+                </pre>
+            </div>
+
+            <!-- Animation-delay-2 -->
+                <div>Animation-delay: 2s</div>
+                <div id="animation-delay-2"></div>
+                <!-- Animation-delay-3 -->
+                <div>Animation-delay: 3s</div>
+                <div id="animation-delay-3"></div>
+                <!-- Animation-delay-6 -->
+                <div>Animation-delay: 6s</div>
+                <div id="animation-delay-6"></div>
+        </article>
+
+        <article>
+            <h3>animation-iteration-count</h3>
+
+            <p>Esta propiedad, como se puede deducir de su nombre, añade la característica de repetir una animación ya creada n veces. Para este ejemplo, 
+            vamos a repetirla 3 veces. Aquí un ejemplo resaltando la nueva propiedad en negrita: 
+            </p>
+
+            <div>
+                <pre>
+                    #anim3 {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        position: relative;
+                        background-color: red;
+                        text-align: center;
+                        animation-name: animation2_3;
+                        animation-duration: 4s;
+                        <b>animation-iteration-count: 3;</b>
+                    }
+                    
+                    @keyframes animation2_3 {
+                        10%  {background-color:orange; left:0px; top:0px;}
+                        25%  {background-color:yellow; left:200px; top:0px;}
+                        50%  {background-color:green; left:400px; top:0px;}
+                        75%  {background-color:blue; left:200px; top:0px;}
+                        100% {background-color:blueviolet; left:0px; top:0px;}
+                    }
+                </pre>
+            </div>
+
+            <p>Como dato de interés, podemos repetir de forma indefinida una animación asignando el valor <cite>infinite</cite> a la propiedad 
+            <cite>animation-iteration-count</cite>.</p>
+            
+            <div>
+                <div id="anim3_1">iteration-count 3</div>
+            </div>
+            <div>
+                <div id="anim3_2">infinite</div>
+            </div>
+        </article>
+
+        <article>
+            <h3>animation-direction</h3>
+
+            <p>Esta propiedad determina la dirección o sentido con el que se va a reproducir la animación. Es una propiedad especial, ya que
+            su comportamiento variará en función del valor que se le asigne. Es una propiedad a la que se le puede asignar cuatro valores, a saber:</p>
+
+            <div>
+                <ul>
+                    <li><b>normal</b>: Con el valor normal la animación realiza el recorrido asignado, es decir, se realizará la <u>animación por 
+                        defecto</u> como si no se hubiese empleado esta propiedad.</li>
+                    <li><b>reverse</b>: Si usamos el valor reverse la animación se ejecutará en sentido opuesto al señalado. En el caso anterior el 
+                        cuadrado rotaba en sentido de las agujas del reloj pero, en este, rota en sentido opuesto.</li>
+                    <li><b>alternate</b>: El valor alternate ejecuta la animación tanto en sentido normal como inverso. Primeramente ejecutará la 
+                        versión en el sentido normal y, posteriormente, la versión invertida. Para ello es imprescindible emplear la propiedad 
+                        anterior animation-iteration-countpara que haga, como mínimo, las dos vueltas.</li>
+                    <li><b>alternate-reverse</b>: Finalmente alternate-reverse que, como se puede deducir, es un alternate que, en vez de empezar 
+                        la ejecución predefinida de la animación empieza por el sentido inverso y luego ejecuta el sentido normal. De igual modo, 
+                        necesitaremos hacer uso de animation-iteration-count para hacer como mínimo las dos vueltas.</li>
+                </ul>
+            </div>    
+
+            <div>
+                <div id="anim4_normal">normal</div>
+                <br/><br/><br/>
+            </div>
+
+            <div>
+                <div id="anim4_reverse">reverse</div>
+                <br/><br/><br/>
+            </div>
+
+            <div>
+                <div id="anim4_alternate">alternate</div>
+                <br/><br/><br/>
+            </div>
+
+            <div>
+                <div id="anim4_alternate-reverse">alternate-reverse</div>
+                <br/><br/><br/><br/><br/>
+            </div>
+
+            <p>Aquí un ejemplo de código, en negrita remarcada la propiedad <cite>animation-direction</cite>:</p>
+
+            <div>
+                <pre>
+                    #anim4_normal {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        position: relative;
+                        background-color: red;
+                        animation-name: animation4;
+                        animation-duration: 4s;
+                        <b>animation-direction: normal;</b>
+                        animation-iteration-count: infinite;
+                    }
+                    
+                    @keyframes animation4 {
+                        10%  {background-color:orange; left:0px; top:0px;}
+                        25%  {background-color:yellow; left:100px; top:0px;}
+                        50%  {background-color:green; left:100px; top:100px;}
+                        75%  {background-color:blue; left:0px; top:100px;}
+                        100% {background-color:blueviolet; left:0px; top:0px;}
+                    }
+                </pre>
+            </div>
+
+        </article>
+
+        <article>
+            <h3>animation-timing-function</h3>
+
+            <p>Esta propiedad describe la curva de velocidad que tomará la animación, es decir, que en vez de mantener una velocidad constante, 
+            se puede establecer que en determinados momentos acelere o decelere según esté prefijado para cada valor de la propiedad. Éstos 
+            son los valores que puede tomar:</p>
+
+            <div>
+                <ul>
+                    <li><b>linear</b>: Con el valor linear la animación adquiere la velocidad por defecto, como si no se emplease esta propiedad.</li>
+                    <li><b>ease</b>: Con el valor ease la animación arranca con un inicio ligeramente lento que se acelera progresivamente y, 
+                        conforme se aproxima al final, decelera nuevamente.</li>
+                    <li><b>ease-in</b>: Con ease-in la animación comienza con un inicio muy lento y, cercano al final, 
+                        incrementa al máximo la velocidad.</li>
+                    <li><b>ease-out</b>: Al emplear ease-out la animación comienza a la máxima velocidad y, cercano al final, la disminuye al mínimo.</li>
+                    <li><b>ease-in-out</b>: Finalmente, con ease-in-out la animación comienza muy lentamente, acelera al máximo, alcanzando su máxima 
+                        velocidad a medio recorrido, y de nuevo disminuye la velocidad al mínimo aproximándose al final.</li>
+                    
+                    <li><b>step-start</b>: steps (valor, start); Comienza antes del intervalo. </li>
+                    <li><b>step-end</b>: steps (valor, end); Comienza después del intervalo. Si el 2º parámetro se omite es end</li>
+                    <li><b>cubic-bezier(P0, P1, P2, P3)</b>: Define una curva de bezier. Con cubic-bezier podemos representar los demás valores anteriores. Ej: linear = cubic-bezier(0, 0, 1, 1); </li>       
+                </ul>
+            </div>
+
+            <p>Ejemplo:</p>
+            <div>
+                <pre>
+                    #animation-timing-function-cubic-bezier {
+                        width: 120px;
+                        height: 50px;
+                        background: rgb(121, 223, 126);
+                        position: relative;
+                        animation: animation-timing-function 10s infinite;
+                        animation-timing-function: cubic-bezier(0, 0, 1, 1);
+                    }
+
+                    @keyframes animation-timing-function {
+                        from {left: 0px;}
+                        to {left: 600px;}
+                    }
+                </pre>
+            </div>
+
+            <!-- animation-timing-function-ease -->
+            <div>animation-timing-function: ease;</div>
+            <div id="animation-timing-function-ease"></div>
+            <!-- animation-timing-function-ease-in -->
+            <div>animation-timing-function: ease-in;</div>
+            <div id="animation-timing-function-ease-in"></div>
+            <!-- animation-timing-function-ease-out -->
+            <div>animation-timing-function: ease-out;</div>
+            <div id="animation-timing-function-ease-out"></div>
+            <!-- animation-timing-function-ease-in-out -->
+            <div>animation-timing-function: ease-in-out;</div>
+            <div id="animation-timing-function-ease-in-out"></div>
+            <!-- animation-timing-function-linear -->
+            <div>animation-timing-function: linear;</div>
+            <div id="animation-timing-function-linear"></div>
+            <!-- animation-timing-function-step-start -->
+            <div>animation-timing-function: step (6, start);</div>
+            <div id="animation-timing-function-step-start"></div>
+            <!-- animation-timing-function-step-end -->
+            <div>animation-timing-function: step-end (6, end);</div>
+            <div id="animation-timing-function-step-end"></div>
+            <!-- animation-timing-function-cubic-bezier -->
+            <div>animation-timing-function: cubic-bezier(0, 0, 1, 1) = linear;</div>
+            <div id="animation-timing-function-cubic-bezier"></div>
+
+        </article>
+
+        <article>
+            <h3>animation-fill-mode</h3>
+
+            <p>Una animación jamás afecta al elemento antes del primer fotograma o después del último. La propiedad <cite>animation-fill-mode</cite> 
+            permite anular este comportamiento.</p>
+
+            <p>La propiedad <cite>animation-fill-mode</cite> posee 4 valores, a saber:</p>
+
+            <div>
+                <ul>
+                    <li><b>none</b>: Si empleamos el valor none la animación no aplicará ningún cambio, como si no se emplease 
+                        esta propiedad.</li>
+                    <li><b>forwards</b>: Al utilizar el valor forwards el elemento conservará los valores del último fotograma.</li>
+                    <li><b>backwards</b>: Con el valor backwards el elemento adquirirá el valor del primer fotograma de la animación y 
+                        lo conservará durante todo el tiempo de delay que pueda tener la misma, acabada su animación volverá a su estado normal.</li>
+                    <li><b>both</b>: Al emplear both, el elemento adquirirá el valor del primer fotograma de la animación, conservándolo durante 
+                        todo el tiempo de delay que pueda tener la misma, y acabada su animación continuará con los valores del último fotograma.</li>
+                </ul>
+            </div>
+
+            <p>En este caso, para comprender el concepto de esta propeidad, no he podido poner en bucle las animaciones de este apartado, por tanto, 
+                si has llegado hasta aquí y las animaciones del ejemplo están detenidas te invito a refrescar la página para poder visualizarlas.
+            </p>
+
+            <div>
+                <div id="anim6_1">none</div>
+            </div>
+            <div>
+                <div id="anim6_2">forwards</div>
+            </div>
+            <div>
+                <div id="anim6_3">backwards</div>
+            </div>
+            <div>
+                <div id="anim6_4">both</div>
+            </div>
+
+            <p>Aquí el fragmento de código del ejemplo empleando el valor both:</p>
+
+            <div>
+                <pre>
+                    #anim6_4 {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100%;
+                        position: relative;
+                        background-color: red;
+                        text-align: center;
+                        animation-name: animation6;
+                        animation-duration: 6s;
+                        animation-delay: 2s;
+                        <b>animation-fill-mode: both;</b>
+                    }
+                    
+                    @keyframes animation6 {
+                        from  {background-color:orange; left: 0px;}
+                        to {background-color:blueviolet; left: 300px;}
+                    }
+                </pre>
+            </div>
+        </article>
+
+        <article>
+            <h3>animation-play-state</h3>
+
+            <p>La propiedad <cite>animation-play-state</cite> determina si una animación está pausada o en funcionamiento. Puede poseer 4 valores 
+            diferentes que son: paused, running, initial, inherit.</p>
+
+            <div>
+                <ul>
+                    <li><b>paused</b>: Como su propio nombre indica, al emplear paused la animación permanecerá pausada.</li>
+                    <li><b>running</b>: Si empleamos el valor running la animación pasará a funcionar normalmente. Tanto este valor, 
+                        como el anterior, es frecuentemente usado por scripts de JavaScripts para manipular el proceso de una animación.</li>
+                    <li><b>initial</b>: Con initial la animación funcionará por defecto como si no empleasemos esta propiedad.</li>
+                    <li><b>inherit</b>: Al usar inherit la animación heredará las propiedades de su elemento padre.</li>
+                </ul>
+            </div>
+
+            <div>
+                <div id="anim7_1">running</div>
+            </div>
+            <div><input type="submit" id="paused" value="Pausar"></div>
+            <br/><br/>
+            <div>
+                <div id="anim7_2">initial</div>
+            </div>
+            <div>
+                <div id="anim7_3">inherit</div>
+            </div>
+        </article>
+
+        <article>
+                <h3>combinación de propiedades en una única línea</h3>
+    
+                <p>Para acabar, existe una forma de definir una animación inluyendo en una única línea todas sus propiedades. Para ello, se debe seguir un 
+                    orden específico, veamos cómo:</p>
+
+                <div>
+                    <pre>
+                        #anim8 {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 100%;
+                            position: relative;
+                            background-color: red;
+                            text-align: center;
+                            <b>animation: animation8 5s linear 1s infinite alternate running;</b>
+                        }
+                    </pre>
+                </div>
+
+                <p>Usando el código de arriba, la línea maracada en negrita es la forma con la que podemos declarar todas las propiedades de 
+                la animación en una línea. Para ello empleamos la propiedad <cite>animation</cite> seguido de las siguientes propiedades en orden:</p>
+
+                <div>
+                    <ul>
+                        <li><b>animation8</b>: Nombre que referencia a la regla @keyframe.</li>
+                        <li><b>5s</b>: Duración de la animación.</li>
+                        <li><b>linear</b>: Curva de velocidad que posee la animación.</li>
+                        <li><b>1s</b>: Delay de la animación.</li>
+                        <li><b>infinite</b>: Número de iteraciones.</li>
+                        <li><b>alternate</b>: Dirección de la animación.</li>
+                        <li><b>running</b>: Estado de la animación pausada o en marcha.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div id="anim8"></div>
+                </div>
+                <br/><br/><br/><br/><br/>
+                <div><input type="submit" id="paused_anim8" value="Pausar"></div>
+            </article>
+
+    </section>   
+
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

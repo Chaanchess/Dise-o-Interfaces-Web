@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Colores y degradados</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Colores</h2>
+        <h3>CSS soporta más de 140 nombres de colores, valores hexadecimales, RGB, RGBA, HSL y opacidad.</h3>
+        <section>
+            <article>
+                <h3>Colores - Por nombre</h3>
+                    <p>CSS3 permite insertar una larga lista de colores predeterminados identificados con un nombre específico sin necesidad de introducir códigos RGB, hexadecimales, etc...<br><br>
+                    En este <a href="https://htmlcolorcodes.com/es/nombres-de-los-colores/">enlace</a> podrás encontrar toda la lista de colores disponibles por nombre.</p>
+                    <div id="pornombre1">indianred</div>
+                    <div id="pornombre2">goldenrod</div>
+                    <div id="pornombre3">mediumspringgreen</div>
+                    <div id="pornombre4">darkturquoise</div>
+            </article>
+
+            <article>
+                <h3>Colores - Hexadecimales</h3>
+                    <p>Los colores en hexadecimal se identifican con un código de 6 dígitos en notación hexadecimal iniciado por una almohadilla '#'.<br><br>
+                    Los primeros dos dígitos corresponden al color rojo, el tercero y cuarto al color verde y el quinto y sexto al azul. A mayor valor, mayor será la intensidad del color correspondiente, siendo el valor 'FF' el color puro.</p>
+                    <div id="hex1">#FF0000</div>
+                    <div id="hex2">#00FF00</div>
+                    <div id="hex3">#0000FF</div>
+                    <div id="hex4">#000000</div>
+                    <div id="hex5">#FFFFFF</div>
+            </article>
+
+            <article>
+                <h3>Colores - RGB</h3>
+                    <p>Los colores RGB (Red Green Blue) se identifican con 3 parámetros que identifican a los colores rojo, verde y azul.<br><br>
+                    Estos parámetros pueden tomar valores de 0 a 255 y determinan la intensidad de los colores rojo, verde y azul, respectivamente.</p>
+                    <div id="RGB1">rgb(255, 0, 0)</div>
+                    <div id="RGB2">rgb(0, 255, 0)</div>
+                    <div id="RGB3">rgb(0, 0, 255)</div>
+                    <div id="RGB4">rgb(0, 0, 0)</div>
+                    <div id="RGB5">rgb(255, 255, 255)</div>
+            </article>
+
+            <article>
+                <h3>Colores - RGBA</h3>
+                    <p>Los colores RGBA (Red Green Blue Alpha) son una extensión de los colores RGB que incluyen un canal alfa que determina la trasparencia del color.<br><br>
+                    El cuarto argumento indica la transparencia del color resultante y puede tomar valores entre 0 y 1, siendo 0 transparente y 1 opaco.</p>
+                    <div id="RGBA1">rgba(0, 0, 255, 0.2)</div>
+                    <div id="RGBA2">rgba(0, 0, 255, 0.4)</div>
+                    <div id="RGBA3">rgba(0, 0, 255, 0.6)</div>
+                    <div id="RGBA4">rgba(0, 0, 255, 0.8)</div>
+            </article>
+            
+            <article>
+                <h3>Colores - HSL</h3>
+                    <div id="imagenHSL"><img src="img/hsl.jpg" alt="Representación gráfica HSL" height="350" width="400"> </div>       
+                    <p>Los colores HSL (Hue, Saturation, Lightness) nos permiten representar colores con algo más de libertad que los colores RGB dividiendo el color en tres elementos: tono, saturación y luminosidad.<br><br>
+                    El primer parámetro, el tono o matiz, se representa con un círculo cromático y puede tomar valores entre 0 y 360. Indica los grados a los que se mueve el "cursor" que indica el color.<br>
+                    El color rojo pertenece a los grados 0 y 360, el amarillo al grado 60, el verde al 120 y el azul al 240, formándose entre ellos el resto de colores.</p>
+                    <div id="HSL1">hsl(0, 100%, 50%)</div>
+                    <div id="HSL2">hsl(60, 100%, 50%)</div>
+                    <div id="HSL3">hsl(120, 100%, 50%)</div>
+                    <div id="HSL4">hsl(240, 50%, 50%)</div>
+                    <p>El segundo parámetro, la saturación, se representa como la línea que parte del centro de la rueda cromática. Es un porcentaje que representa la pureza del color, siendo 0% gris y 100% el color puro.</p>
+                    <div id="HSL5">hsl(120, 0%, 50%)</div>
+                    <div id="HSL6">hsl(120, 50%, 50%)</div>
+                    <div id="HSL7">hsl(120, 75%, 50%)</div>
+                    <div id="HSL8">hsl(120, 100%, 50%)</div>
+                    <p>El tercer parámetro, la luminosidad, se representa como un doble cono blanco y negro; la altura en la rueda cromática. Es un porcentaje que representa lo oscuro o claro que es el color, siendo 0% negro y 100% blanco.</p>
+                    <div id="HSL9">hsl(120, 0%, 0%)</div>
+                    <div id="HSL10">hsl(120, 50%, 33%)</div>
+                    <div id="HSL11">hsl(120, 75%, 66%)</div>
+                    <div id="HSL12">hsl(120, 100%, 100%)</div>    
+                    
+            </article>
+            
+            <article>
+                <h3>Colores - HSLA</h3>
+                    <p>Al igual que los colores RGBA, los colores HSLA son una extensión de los colores HSL que incluyen un canal alfa que determina la transparencia del color.<br><br>
+                    Este canal alfa corresponde al cuarto argumento que puede tomar valores entre 0 y 1 y determina la transparencia del color resultante, siendo 0 transparente y 1 opaco.</p>
+                    <div id="HSLA1">hsla(0, 100%, 50%, 0.2)</div>
+                    <div id="HSLA2">hsla(0, 100%, 50%, 0.4)</div>
+                    <div id="HSLA3">hsla(0, 100%, 50%, 0.6)</div>
+                    <div id="HSLA4">hsla(0, 100%, 50%, 0.8)</div>
+            </article>
+            
+            <article>
+                <h3>Colores - Opacity</h3>
+                    <p>La propiedad 'opacity' de CSS nos permite modificar la transparencia de cualquier elemento HTML en su totalidad (Color del fondo, texto...).<br><br>
+                    El valor de la propiedad debe ser un número entre 0 y 1, siendo 0 transparente y 1 opaco.</p>
+                    <div id="opacity1">hsl(60, 100%, 50%) - opacity: 0.2</div>
+                    <div id="opacity2">hsl(60, 100%, 50%) - opacity: 0.4</div>
+                    <div id="opacity3">hsl(60, 100%, 50%) - opacity: 0.6</div>
+                    <div id="opacity4">hsl(60, 100%, 50%) - opacity: 0.8</div>
+            </article>
+
+
+            <h2>Degradados</h2>
+            <h3>El uso de degrados en CSS, permiten mostrar transiciones entre dos o más colores especificados.</h3> 
+            <h3>Podemos diferenciarlos entre Linear Gradients (Degradados Lineales) ó Radial Gradients (Degradados Radiales).</h3>
+            <article>
+                <h3>Linear Gradient</h3>
+                <p>Para crear un Linear Gradient debemos de definir al menos dos paradas de colores (color stops). Las paradas de color son los colores entre los que se desea realizar el degradado.Se puede indicar también un punto de inicio y una dirección (o un ángulo).</p>
+                <p>Sintaxis: background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</p>
+            </article>    
+        
+            <article>
+                <h3>Linear Gradient - Top to Bottom</h3>
+                <p>Degradado de arriba hacia abajo con los colores verde y amarillo, este es el que se aplica por defecto, se indica unicamente los dos colores.</p>
+                <p>Sintaxis: background-image: linear-gradient(green, yellow);</p>
+                <div id="grad1"></div>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Bottom to Top</h3>
+                <p>Degradado de abajo hacia arriba con los colores verde y amarillo, hay que indicar la posición con to top a parte de los dos colores.</p>
+                <p>Sintaxis: background-image: linear-gradient(to top, green, yellow);</p>
+                <div id="grad2"></div>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Left to Right</h3>
+                <p>Degradado de izquierda hacia la derecha, en este caso hay que indicar en el css to right para que el verde empiece por la izquierda y vaya hacia la derecha con el color amarillo.</p>
+                <p>Sintaxis: background-image: linear-gradient(to right, green , yellow);</p>
+                <div id="grad3"></div>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Right to Left</h3>
+                <p>Degradado de derecha hacia la izquierda, en este caso hay que indicar en el css to left para que el verde empiece por la derecha y vaya hacia la izquierda con el color amarillo.</p>
+                <p>Sintaxis: background-image: linear-gradient(to left, green , yellow);</p>
+                <div id="grad4"></div>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Diagonal </h3>
+                <p>Degradado diagonal en el que hay que especificar tanto la posición inicial horizontal y vertical. En este ejemplo, se indica que vaya hacia abajo indicando to bottom y hacia la derecha con right.</p>
+                <p>Sintaxis: background-image: linear-gradient(to bottom right, green, yellow);</p>
+                <div id="grad5"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Uso de Grados</h3>
+                <p>Si queremos tener más control sobre la dirección del gradiente, se puede definir un ángulo, en lugar de las direcciones predefinidas (hacia abajo, hacia arriba, hacia la derecha, hacia la izquierda, hacia la derecha, etc.).</p>
+                <p>Sintaxis: background-image: linear-gradient(-90deg, green, yellow);</p>
+                <div id="grad6"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Uso de varios colores</h3>
+                <p>Para crear degradados podemos usar más de dos colores, en este caso se mostrará el uso de 3 colores que irán de arriba hacia abajo.</p>
+                <p>Hay que especificar en el código css to bottom para que empiece desde arriba hacia abajo o to top para que vaya de abajo hacia arriba.</p>
+                <p>Sintaxis: background-image: linear-gradient(to bottom, red, yellow, green);</p>
+                <div id="grad7"></div>
+                <p>A continuación se mostrará un ejemplo como el anterior, pero esta vez se mostrará los colores de izquierda hacia la derecha.</p>
+                <p>Hay que especificar en el código css to right para que empiece desde la izquierda hacia la derecha o to left para que vaya de derecha hacia la izquierda.</p>
+                <p>Sintaxis: background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);</p>  
+                <div id="grad8"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Linear Gradient - Uso de transparencias </h3>
+                <p>Los degradados, también admiten transparencias. Para usar una transparencia, se usa la función rgba() para definir los colores.</p>
+                <p>El último parámetro en el rgba() se debe indicar 0 o 1, si indicamos un 0 la transparencia es total y si es 1 no hay transparencia y se muestra el color completo.</p>
+                <p>Sintaxis: background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));</p>
+                <div id="grad9"></div>
+                </span></p>
+            </article>
+            
+            <article>
+                <h3>Linear Gradient - repeating-linear-gradient() </h3>
+                <p>A continuación se mostrará como se pueden repetir un mismo degradado. Como se ve en el código del ejemplo, hay que indicar el % que tendrá el segundo y tercer color.</p>
+                <p>Sintaxis: background-image: repeating-linear-gradient(red, yellow 10%, green 20%);</p>
+                <div id="grad10"></div>
+                <p>A continuación se mostrará como se pueden repetir un mismo degradado en este caso usando los grados.</p>
+                <p>Sintaxis: background-image: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);</p>
+                <div id="grad11"></div>
+                </span></p>
+    
+    
+            </article>  <article>
+                <h3>Radiel Gradient</h3>
+                <p>Un Radial Gradient se define por su centro.</p>
+                <p>Sintaxis: background-image: radial-gradient(shape size at position, start-color, ..., last-color);</p>
+                <p>La Forma que se le quiere dar al radial gradient (shape) por defecto es una elipse, si queremos un círculo hay que indicar circle.</p>
+                <p>El tamaño (size) por defecto es farthest-corner, pero se puede usar closest-side, farthest-side y closest-corner. Más adelante se mostrará un ejemplo.</p>
+                <p>La posición (position) center por defecto.</p>
+            </article>   
+            <article>
+                <h3>Radial Gradient - Por defecto</h3>
+                <p>Para crear un degradado radial se necesitan al menos 2 colores, en por defecto cada color ocupara el mismo tamaño.</p>
+                <p>Sintaxis: background-image: radial-gradient(red, yellow, green);</p>
+                <div id="grad12"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Radial Gradient - Cada color ocupa un espacio distinto</h3>
+                <p>A continuación se muestra un ejemplo de un degradado radial, al que cada color se le da un % y es lo que ocupará dicho color.</p>
+                <p>Sintaxis: background-image: radial-gradient(red 5%, yellow 15%, green 60%);</p>
+                <div id="grad13"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Radial Gradient - Estableciendo formas</h3>
+                <p>Podemos darle forma al degradado, usando la palabra circle si queremos un círculo y si no se pone nada (por defecto) se formará una elipse. </p>
+                <p>sintaxis: background-image: radial-gradient(circle, red, yellow, green);</p>
+                <div id="grad14">Circulo</div>
+                <p>sintaxis: background-image: radial-gradient(red, yellow, green);</p>
+                <div id="grad15">Elipse (Por defecto)</div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Radial Gradient - Tamaño del gradiente</h3>
+                <p>Como se ha comentado anteriormente, hay 4 tipos de tamaño que a continuación se mostraran en los ejemplos</p>
+                <p>Debemos de usar closes-side at (cerca del lado) además de indicar el % donde se situara el círculo o la eclipse</p>
+                <p>sintaxis: background-image: radial-gradient(closest-side at 80% 25%, red, yellow, black);</p>
+                <div id="grad16"></div>
+                <p>Otro valor que podemos usar es farthest-side at (alejado del lado) además de indicar el % donde se situara el círculo o la eclipse.</p>
+                <p>sintaxis: background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);</p>
+                <div id="grad17"></div>
+                <p>Otro valor que podemos usar es closest-corner at (cerca de la esquina) además de indicar el % donde se situara el círculo o la eclipse.</p>
+                <p>sintaxis: background-image: radial-gradient(closest-corner at 80% 25%, red, yellow, black);</p>
+                <div id="grad18"></div>
+                <p>Otro valor que podemos usar es farthest-corner at (alejado de la esquina y el que se usa por defecto) además de indicar el % donde se situara el círculo o la eclipse.</p>
+                <p>sintaxis: background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);</p>
+                <div id="grad19"></div>
+                </span></p>
+            </article>
+    
+            <article>
+                <h3>Radial Gradient - repeating-radial-gradient()</h3>
+                <p>Se usa para repetir un radial gradient, para ello debemos de indicar en los colores el % que ocupará cada uno </p>
+                <p>Sintaxis: background-image: repeating-radial-gradient(red, yellow 10%, green 15%);</p>
+                <div id="grad20"></div>
+                </span></p>
+            </article>
+        </section>   
+
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+</html>

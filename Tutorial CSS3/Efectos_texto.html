@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rafael Lopez Cruz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Fuentes y Ef Texto - TUTORIAL CSS3</title>
+</head>
+<body>
+    <noscript>
+        <h1>Esta p&aacute;gina requiere el uso de JavaScript</h1>
+    </noscript>
+    <h1>TUTORIAL CSS3 - 2019/2020</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>   
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_mult.html">Col Múltiples</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+            <li><a href="Svg_filter.html">Filter y SVG</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Tutorial Fuentes y Ef Texto</h2>
+        <h3>En este tutorial explicaremos todas las propiedades de las fuentes de texto.</h3>
+        <section>
+            <article>
+                <h3>Font-face</h3>
+                <p>La propriedad @font-face permite al autor especificar fuentes online para visualizar en sus páginas web. 
+                        Al permitir a los autores proporcionar sus propias fuentes, @font-face elimina la necesidad de depender del numero limitado de fuentes de usuarios instaladas en sus ordenadores.</p>
+                <p>Sintaxis:</p>
+                <p>@font-face {
+                    <br>&emsp;font-family: 'un-nombre-de-fuente-remota';
+                    <br>&emsp;src: 'origen' [,origen]*;
+                    <br>&emsp;[font-weight: 'peso'];
+                    <br>&emsp;[font-style: 'estilo'];
+                        <br>}</p>
+                <div>Ejemplo:</div>
+                <p>@font-face {
+                        <br>&emsp;font-family: "Mystery Quest";
+                        <br>&emsp;src: local('MysteryQuest'),
+                        <br>&emsp;&emsp;&emsp;url("../fonts/MysteryQuest-Regular.ttf");
+                        <br>}</p>
+                        <p>Se puede especificar una fuente almacenada en el ordenador del usuario utilizando la sintaxis local(). Si esa fuente no es encontrada, se intentarán otros orígenes hasta encontrar una fuente.</p>
+                <div class="fuente_inicial">The Big Headline</div>
+                <div class="font-face-modified">The Big Headline</div>
+            </article>
+            <article>
+                    <h3>Font-kerning</h3>
+                    <p>La propriedad font-kerning define cómo se espacian las letras. Esta característica hace que el espaciado entre caracteres sea más uniforme y agradable de leer de lo que sería.</p>
+                    <p>Posibles valores: auto/normal/none.</p>
+                    <p>auto: El navegador determina si se debe usar o no el kerning de fuentes.</p>
+                    <p>normal: Se debe aplicar la información de kerning de fuentes almacenada en la fuente.</p>
+                    <p>none: La información de kerning de fuentes almacenada en la fuente está deshabilitada.</p>
+                    <p>Posibles valores:<br>
+                            font-kerning: auto;<br>
+                            font-kerning: normal;<br>
+                            font-kerning: none;<br>
+                    </p>
+                    
+                    <div>Ejemplo:</div>
+                    <div class="container">
+                            <p class="ejemplo">{
+                                <br>&emsp;font-kerning: none;
+                                <br>}
+                        </p>
+                    <div class="nokern">AV</div>
+                    <p class="ejemplo">{
+                                <br>&emsp;font-kerning: normal;
+                                <br>}
+                        </p>
+                    <div class="kern-normal">AV</div>
+                    <p class="ejemplo">{
+                                <br>&emsp;font-kerning: auto;
+                                <br>}
+                        </p>
+                    <div class="kern-auto">AV</div>
+            </div>
+                </article>
+                <article>
+                        <h3>Text-orientation</h3>
+                        <p>La propiedad  CSS  text-orientation define la orientación del texto en una línea de escritura. Ésta propiedad CSS es util para controlar la forma en que se muestran los lenguajes que utilizan escritura vertical, y tambien para construir encabezados verticales para tablas.</p>
+                        
+                        <div>Ejemplo:</div>
+                        
+                        <p>{
+                                <br>&emsp;writing-mode: vertical-rl;
+                                <br>&emsp;text-orientation: upright;
+                                <br>}
+                        </p>
+                        <div class="text-orientation">Lorem ipsum dolet semper</div>
+                    </article>
+                    <article>
+                            <h3>Font-size-adjust</h3>
+                            <p>La propiedad font-size-adjust especifica que el tamaño de la fuente debería escogerse basándose en el tamaño de las minúsculas en lugar las mayúsculas.</p>
+                            
+                            <div>Ejemplo:</div>
+                            <p>{
+                                    <br>&emsp;font-size-adjust: 0.58;
+                                    <br>}
+                            </p>
+                            <div class="container">
+                            <div>The Big Headline</div>
+                            <div class="font-adjust">The Big Headline</div>
+                        </div>
+                        </article>
+                <article>
+                        <h3>Text-rendering</h3>
+                        <p>La propiedad Text-rendering básicamente toma una decisión sobre lo que el navegador debe priorizar cuando se procesa
+                                texto. Puede optimizar en términos de velocidad (optimizeSpeed), precisión geométrica (geometricPrecision),
+                                y por supuesto, legibilidad (optimizeLegibility)</p>
+                        <p>Posibles valores:<br>
+                                    text-rendering: auto;<br>
+                                    text-rendering: optimizeSpeed;<br>
+                                    text-rendering: optimizeLegibility;<br>
+                                    text-rendering: geometricPrecision;<br>
+                        </p>
+                            
+                        <div>Ejemplo:</div>
+                        <div class="container">
+                        <p class="ejemplo">{
+                                <br>&emsp;text-rendering: auto;
+                                <br>}</p>
+                        
+                        
+                                <div class="text-rendering-auto">IES Gran Capitán</div>
+                        
+                        <p class="ejemplo">{
+                                    <br>&emsp;text-rendering: optimizeSpeed;
+                                    <br>}</p>
+                            
+                            
+                                    <div class="text-rendering-optimizeSpeed">IES Gran Capitán</div>
+                        <p class="ejemplo">{
+                                <br>&emsp;text-rendering: optimizeLegibility;
+                                <br>}</p>
+                        
+                        
+                                <div class="text-rendering-optimizeLegibility">IES Gran Capitán</div>
+                        
+                        <p class="ejemplo">{
+                                    <br>&emsp;text-rendering: geometricPrecision;
+                                    <br>}</p>
+                            
+                            
+                                    <div class="text-rendering-geometricPrecision">IES Gran Capitán</div>
+                    </div>
+                    </article>
+                    <article>
+                            <h3>Font-stretch</h3>
+                            <p>Algunas familias de fuentes ofrecen caras adicionales en las que los caracteres son más estrechos que la cara normal (caras condensadas) o más anchos que la cara normal (caras expandidas).
+    
+                                    Puede usar el Font-stretch para seleccionar una cara condensada o expandida de dichas fuentes. Si la fuente que está utilizando no ofrece caras condensadas o expandidas, esta propiedad no tiene efecto.</p>
+                            <p>Para los navegadores con motor de chrome(Blink) es necesario indicar la propiedad dentro de la declaración de la font-family (<i>font-stretch: 1% 500%;</i>)
+                                <pre class="fuentes_pre">
+                                        @font-face {
+                                            src: url('../fonts/LeagueMonoVariable.ttf');
+                                            font-family:'LeagueMonoVariable';
+                                            font-style: normal;
+                                            <b>font-stretch: 1% 500%; /* Required by Chrome */</b>
+                                          }
+                                </pre>
+                            </p>
+                            <p>Posibles valores: 
+                                    <br>font-stretch: ultra-condensed;
+                                    <br>font-stretch: extra-condensed;
+                                    <br>font-stretch: condensed;
+                                    <br>font-stretch: semi-condensed;
+                                    <br>font-stretch: normal;
+                                    <br>font-stretch: semi-expanded;
+                                    <br>font-stretch: expanded;
+                                    <br>font-stretch: extra-expanded;
+                                    <br>font-stretch: ultra-expanded;
+                                    <br>font-stretch: 0%;
+                                    <br>font-stretch: 50%;
+                                    <br>font-stretch: 200%;
+                            </p>
+                                
+                            <div>Ejemplo:</div>
+                            <div class="container-stretch">
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: 50%;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-50">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: 100%;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-100">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: 200%;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-200">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: ultra-condensed;
+                                            <br>}</p>
+                                    
+                                    <div class="font-stretch-ultra-condensed">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: extra-condensed;
+                                            <br>}</p>
+                                    
+                                    <div class="font-stretch-extra-condensed">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: extra-condensed;
+                                            <br>}</p>
+                                    
+                                    <div class="font-stretch-extra-condensed">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: semi-condensed;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-semi-condensed">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: normal;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-normal">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-stretch: semi-expanded;
+                                    <br>}</p>
+                            
+                            <div class="font-stretch-semi-expanded">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: expanded;
+                                            <br>}</p>
+                                    
+                            <div class="font-stretch-expanded">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: extra-expanded;
+                                            <br>}</p>
+                                    
+                            <div class="font-stretch-extra-expanded">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                            <br>&emsp;font-stretch: ultra-expanded;
+                                            <br>}</p>
+                                    
+                            <div class="font-stretch-ultra-expanded">IES Gran Capitán</div>
+                    </div>
+                        </article>
+                    <article>
+                            <h3>Font-variant-ligatures</h3>
+                            <p>
+                                    La propiedad CSS de font-variant-ligatures controla las ligaduras y las formas contextuales que se utilizan en el contenido textual de los elementos a los que se aplica. Esto conduce a formas más armonizadas en el texto resultante.</p>
+                            <p>Posibles valores: 
+                                    <br>font-variant-ligatures: normal;
+                                    <br>font-variant-ligatures: none;
+                                    <br>font-variant-ligatures: common-ligatures;           
+                                    <br>font-variant-ligatures: no-common-ligatures;        
+                                    <br>font-variant-ligatures: discretionary-ligatures;    
+                                    <br>font-variant-ligatures: no-discretionary-ligatures; 
+                                    <br>font-variant-ligatures: historical-ligatures;       
+                                    <br>font-variant-ligatures: no-historical-ligatures;   
+                                    <br>font-variant-ligatures: contextual;                
+                                    <br>font-variant-ligatures: no-contextual;             
+                            </p>
+                                
+                            <div>Ejemplo:</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: none; 
+                                    <br>}</p>
+                            
+                            <div class="ligatures-none">IES Gran Capitán</div>
+                            <div class="ligatures-none2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: normal;
+                                    <br>}</p>
+                            
+                            <div class="ligatures-normal">IES Gran Capitán</div>
+                            <div class="ligatures-normal2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: common-ligatures; 
+                                    <br>}</p>
+                                    
+                            <div class="common-ligatures">IES Gran Capitán</div>
+                            <div class="common-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: no-common-ligatures;
+                                    <br>}</p>
+                                    
+                            <div class="no-common-ligatures">IES Gran Capitán</div>
+                            <div class="no-common-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: discretionary-ligatures; 
+                                    <br>}</p>
+                            
+                            <div class="discretionary-ligatures">IES Gran Capitán</div>
+                            <div class="discretionary-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: no-discretionary-ligatures;
+                                    <br>}</p>
+                            
+                            <div class="no-discretionary-ligatures">IES Gran Capitán</div>
+                            <div class="no-discretionary-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: historical-ligatures;
+                                    <br>}</p>
+                            
+                            <div class="historical-ligatures">IES Gran Capitán</div>
+                            <div class="historical-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: no-historical-ligatures;
+                                    <br>}</p>
+                            
+                            <div class="no-historical-ligatures">IES Gran Capitán</div>
+                            <div class="no-historical-ligatures2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: contextual;
+                                    <br>}</p>
+                            
+                            <div class="contextual">IES Gran Capitán</div>
+                            <div class="contextual2">IES Gran Capitán</div>
+                            <p class="ejemplo">{
+                                    <br>&emsp;font-variant-ligatures: no-contextual;
+                                    <br>}</p>
+                            
+                            <div class="no-contextual">IES Gran Capitán</div>
+                            <div class="no-contextual2">IES Gran Capitán</div>
+                        </article>
+                        <article>
+                            <h3>Font-variant-caps</h3>
+                            <p>La propiedad font-variant-caps permite mostrar un tipo de letra en versalitas.</p>
+                            <p>Posibles valores: 
+                                    <br>font-variant-caps: normal;
+                                    <br>font-variant-caps: none;
+                                    <br>font-variant-caps: small-caps;           
+                                    <br>font-variant-caps: all-samll-caps;        
+                                    <br>font-variant-caps: petite-caps;    
+                                    <br>font-variant-caps: all-petite-caps; 
+                                    <br>font-variant-caps: unicase;       
+                                    <br>font-variant-caps: titling-caps;   
+                            </p>
+                                
+                            <div>Ejemplo:</div>
+                            <p>{
+                                    <br>&emsp;font-variant: none;
+                                    <br>}</p>
+                            
+                            <div class="caps-none">IES Gran Capitán</div>
+                            <p>{
+                                    <br>&emsp;font-variant: small-caps;
+                                    <br>}</p>
+                            
+                            <div class="small-caps">IES Gran Capitán</div>
+                            
+                            <p>{
+                                    <br>&emsp;font-variant: petite-caps;
+                                    <br>}</p>
+                            
+                            <div class="unicase">IES Gran Capitán</div>
+    
+                        </article>
+                        <article>
+                            <h3>Font-variant-numeric</h3>
+                            <p>La propiedad font-variant-numeric permite mostrar números con formatos especiales.</p>
+                            <p>Posibles valores: 
+                                    <br>font-variant-numeric: normal;
+                                    <br>font-variant-numeric: lining-nums;
+                                    <br>font-variant-numeric: oldstyle-nums;           
+                                    <br>font-variant-numeric: proportional-nums;        
+                                    <br>font-variant-numeric: tabular-nums;    
+                                    <br>font-variant-numeric: diagonal-fractions; 
+                                    <br>font-variant-numeric: stacked-fractions;       
+                                    <br>font-variant-numeric: ordinal;
+                                    <br>font-variant-numeric: slashed-zeros;   
+                            </p>
+                                
+                            <div>Ejemplo:</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: normal;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-normal">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: lining-nums;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-lining-nums">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: oldstyle-nums;
+                                    <br>}</p>
+                                    
+                                    <div class="variant-numeric-oldstyle-nums">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: proportional-nums;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-proportional-nums">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: tabular-nums;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-tabular-nums">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: slashed-zero;
+                                    <br>}</p>
+                                    
+                                    <div class="variant-numeric-slashed-zeros">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: diagonal-fractions;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-diagonal-fractions">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: stacked-fractions;
+                                    <br>}</p>
+                            
+                            <div class="variant-numeric-stacked-fractions">0123456789</div>
+                            <p>{
+                                    <br>&emsp;font-variant-numeric: ordinal;
+                                    <br>}</p>
+                                    
+                                    <div class="variant-numeric-ordinal">0123456789</div>
+    
+                        </article>
+    
+            <article>
+                <h3>text-fill-color</h3>
+                <p>La propiedad CSS text-fill-color especifica el color de relleno de las letras de un texto. Si la propiedad no está establecidad se usará el valor de la propiedad color.</p>
+                <p>Solo está suportada utilizando el modificador -webkit-</p>
+                <div>Ejemplo:</div>
+                <p>{
+                        <br>&emsp;font: bold 5.8em Bebas, Arial;
+                        <br>&emsp;margin: 0.4em;
+                        <br>&emsp;background: url(../img/bg.jpg) center;
+                        <br>&emsp;-webkit-background-clip: text;
+                        <br>&emsp;-webkit-text-fill-color: transparent;
+                        <br>&emsp;text-transform: uppercase;
+                        <br>}</p>
+                <div class="text-fill">The Big Headline</div>
+            </article>
+    
+            <article>
+                <h3>Text-shadow</h3>
+                <p>La propiedad text-shadow agrega sombra al texto. Acepta una lista de sombras separadas por coma, para aplicarlas al texto y a la propiedad text-decorations del elemento.
+    
+                        Cada sombra es especificada como un offset del texto, junto con valores de color y radio de difuminación opcionales.
+                        
+                        Múltiples sombras son aplicadas del frente al fondo, en el mismo orden que sean definidas.</p>
+                        <p>Atributos:<br>
+                            text-shadow: desplazamiento eje-x | desplazamiento eje-y | valor de difuminado | color</p> 
+                <div>Ejemplo:</div>
+                <p>{
+                        <br>&emsp;font: bold 3em Arial;
+                        <br>&emsp;text-shadow: 0 1px 0 #ccc,
+                        <br>&emsp;0 2px 0 #c5c5c5,
+                        <br>&emsp;0 3px 0 #bbb,
+                        <br>&emsp;0 4px 0 #b5b5b5,
+                        <br>&emsp;0 5px 0 #aaa,
+                        <br>&emsp;0 6px 0 #a5a5a5,
+                        <br>&emsp;0 7px 3px rgba(0, 0, 0, 0.3),
+                        <br>&emsp;0 10px 10px rgba(0, 0, 0, 0.2),
+                        <br>&emsp;0 10px 20px rgba(0, 0, 0, 0.15),
+                        <br>&emsp;0 20px 20px rgba(0, 0, 0, 0.1);
+                        <br>&emsp;color: rgba(255, 255, 255, 0.8);
+                        <br>}</p>
+                <div class="text-shadow1">The Big Headline</div>
+                <p>{
+                        <br>&emsp;font: 3em Verdana;
+                        <br>&emsp;text-shadow: 0 0 10px #fff,
+                        <br>&emsp;0 0 20px rgba(255, 255, 255, 0.3),
+                        <br>&emsp;0 0 30px rgba(33, 207, 255, 1),
+                        <br>&emsp;0 0 40px rgba(33, 207, 255, 0.8),
+                        <br>&emsp;0 0 60px rgba(33, 207, 255, 0.5),
+                        <br>&emsp;0 0 100px rgba(33, 207, 255, 0.3);
+                        <br>&emsp;color: rgba(255, 255, 255, 0.8);
+                        <br>}</p>
+                <div class="text-shadow2">The Big Headline</div>
+                <p>{
+                        <br>&emsp;font: 3em Verdana;
+                        <br>&emsp;text-shadow: 0 0 10px #fff,
+                        <br>&emsp;0 0 20px rgba(255, 255, 255, 0.3),
+                        <br>&emsp;0 0 30px rgba(33, 207, 255, 1),
+                        <br>&emsp;0 0 40px rgba(33, 207, 255, 0.8),
+                        <br>&emsp;0 0 60px rgba(33, 207, 255, 0.5),
+                        <br>&emsp;0 0 100px rgba(33, 207, 255, 0.3);
+                        <br>&emsp;color: transparent;
+                        <br>}</p>
+                <div class="text-shadow2">The Big Headline</div>
+            </article>
+        </section>
+
+
+        </main>
+        <footer>
+            <div>Rafael L&oacute;pez Cruz</div>
+            <a href="https://twitter.com/RafaLpeC" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+            <a href="https://github.com/R4f4Lc" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+        </footer>
+</body>
+</html>
